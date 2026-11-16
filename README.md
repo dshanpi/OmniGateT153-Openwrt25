@@ -8,13 +8,13 @@
 
 ## ImmortalWrt 25.12 中文套件
 
-**ImmortalWrt 25.12.2 / Argon 中文 / 4G 管理 / 多 WAN**，预装 SmartDNS、DDNS 和流量统计。T153 profile 自动带入这些软件，仍使用源码 DDR4/SPL/U-Boot 和完整 eMMC 镜像构建流程。
+**正式发布 r1：ImmortalWrt 25.12.2 / Argon 中文 / 4G 与多 WAN 软件套件。** 已实测 FES raw 写入 eMMC 用户区、源码 DDR4 / SPL / U-Boot 启动、四核在线、LAN 千兆协商与 DHCP、Argon 中文登录页。
 
-**preview.2 已重新生成启动区和完整镜像，提供未压缩 `.img`，可直接选择烧录。**
+[下载 r1 镜像与独立 FES](https://github.com/dshanpi/OmniGateT153-Openwrt25/releases/tag/v25.12.2-t153-immortalwrt-r1) · [专用代码分支](https://github.com/dshanpi/OmniGateT153-Openwrt25/tree/immortalwrt-25.12-t153) · [烧录步骤](https://github.com/dshanpi/OmniGateT153-Openwrt25/blob/immortalwrt-25.12-t153/docs/FLASH.md) · [源码构建](https://github.com/dshanpi/OmniGateT153-Openwrt25/blob/immortalwrt-25.12-t153/docs/BUILD.md)
 
-[下载 preview.2 镜像与独立 FES](https://github.com/dshanpi/OmniGateT153-Openwrt25/releases/tag/v25.12.2-t153-immortalwrt-preview.2) · [新版烧录说明](docs/IMMORTALWRT-PREVIEW2.md) · [功能与源码编译流程](docs/IMMORTALWRT.md) · [板级补丁](patches/immortalwrt-25.12.2-t153-preview2.patch)
+烧录使用 **完整 raw + 独立 DDR933 FES → eMMC 用户区**；不要启用额外 Boot0 写入。LAN 为 **eth0 / 192.168.153.1**，eth1 为 WAN。
 
-本版仍待实际烧录及启动验收，旧版 SPL 预检失败的根因尚未确定。Linux 可见内存仍为 384 MiB，WAN 千兆稳定性问题尚未解决，不支持 sysupgrade。eth0/LAN 管理地址为 `192.168.153.1`；4G、多 WAN 和 SmartDNS 按实际网络配置后启用。
+**已知限制：AIC Wi-Fi 本次上电失败；Linux 使用 384 MiB；WAN 千兆稳定性、蓝牙、4G 拨号、多 WAN 切换、断电冷启动和长期运行未完成本版验收。** 不支持 sysupgrade。完整结果见[发布说明](https://github.com/dshanpi/OmniGateT153-Openwrt25/blob/immortalwrt-25.12-t153/RELEASE-NOTES.md)。
 
 ## 认识 OmniGate 硬件
 
