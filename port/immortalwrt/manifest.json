@@ -1,0 +1,616 @@
+{
+  "schema_version": 1,
+  "upstream": {
+    "repository": "https://github.com/immortalwrt/immortalwrt",
+    "tag": "v25.12.2",
+    "commit": "4fc16f2985a358bd43bb522e43f05395fcbd6ed5",
+    "archive_sha256": "1126f61d9d300d165221419f54fef847dda955c9cb80a817f4b71b7c2fa187eb",
+    "source_date_epoch": 1788681816,
+    "kernel": "6.12.103"
+  },
+  "purpose": "Readable T153 port sources and complete snapshots of six modified upstream files. This directory is for review and maintenance, not an unchecked copy-over installation.",
+  "build_method": "Apply patches/immortalwrt-25.12.2-t153-r1.patch to the locked official v25.12.2 archive, then run normal feeds/menuconfig/make.",
+  "full_patch": {
+    "path": "patches/immortalwrt-25.12.2-t153-r1.patch",
+    "sha256": "ea3aa43db99dcc2c6f947441a74b0711f5a6609220da43af1dd3f05344b60817"
+  },
+  "split_patch": {
+    "path": "upstream-changes.patch",
+    "sha256": "5eadfeee97cc9b008703ad08482e7cd22df67ac3bedb5b7b054b628130895a60",
+    "modified_upstream_files": 6,
+    "clean_baseline_apply_and_content_compare": "PASS"
+  },
+  "added_files": 77,
+  "modified_files": 6,
+  "deleted_files": 0,
+  "file_count": 83,
+  "files": [
+    {
+      "path": "package/boot/uboot-t153/Makefile",
+      "change": "A",
+      "bytes": 2390,
+      "sha256": "2ea48ceba35310485d937a7235a8d529e5a2c6ee677078b3c86284dc5c245ecc",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/boot/uboot-t153/README.txt",
+      "change": "A",
+      "bytes": 3551,
+      "sha256": "763a61dc1bb2d436c445c6f641f41afd66417064a4664472a447d4f0f1c2de41",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/boot/uboot-t153/files/arch/arm/dts/sun8i-t153-dshanpi-omnigate-uboot.dts",
+      "change": "A",
+      "bytes": 936,
+      "sha256": "eac2ff1d8d9377bb75b8e0fe62d42e720e90468b4b09dd8ed754b749d05d5a6e",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/boot/uboot-t153/files/board/dshanpi/t153/Kconfig",
+      "change": "A",
+      "bytes": 1061,
+      "sha256": "b05deb2f5b59a2f65a46b67ff56353681dbf9b45028e368091dc03f67692b47e",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/boot/uboot-t153/files/board/dshanpi/t153/Makefile",
+      "change": "A",
+      "bytes": 244,
+      "sha256": "a6289c1ca685103e66bed61cc23ad1deff585c377307071c7e22deae00c1ca2e",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/boot/uboot-t153/files/board/dshanpi/t153/board.c",
+      "change": "A",
+      "bytes": 4825,
+      "sha256": "af340094da0273e9a1f5f6ad1356f6e479ebe5202299909d86737f8c46c2ea73",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/boot/uboot-t153/files/board/dshanpi/t153/ddr.c",
+      "change": "A",
+      "bytes": 20037,
+      "sha256": "d9be271cbe1c61ec76a154684c28a147911df472a06db68531797393a42bd9c9",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/boot/uboot-t153/files/board/dshanpi/t153/ddr.h",
+      "change": "A",
+      "bytes": 845,
+      "sha256": "08461af3c9c46fb0eb6093c7c90b07960e34037ad1113b4b90e374e60b3df0ca",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/boot/uboot-t153/files/board/dshanpi/t153/fel-request.c",
+      "change": "A",
+      "bytes": 1194,
+      "sha256": "0d476918764f36db13e1e376d6bf5806a9f29a2c427e89847e14ea18ce4ded4a",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/boot/uboot-t153/files/board/dshanpi/t153/fel.S",
+      "change": "A",
+      "bytes": 1653,
+      "sha256": "f490fd730f8d7064e962e510b899d769dd41ea23e956d4e98f58ee8785dfe160",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/boot/uboot-t153/files/board/dshanpi/t153/mmc.c",
+      "change": "A",
+      "bytes": 12566,
+      "sha256": "6e649b59ec38f1cef4a01ad14287725496e72a2d5de1d7d81d06a7aaaa20ae45",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/boot/uboot-t153/files/board/dshanpi/t153/psci-entry-t153.S",
+      "change": "A",
+      "bytes": 760,
+      "sha256": "1e8bbf14315cafc0a2114a2d3fe506c90f92357ccfeaa2b8b3241e68e83b6e55",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/boot/uboot-t153/files/board/dshanpi/t153/psci-t153.c",
+      "change": "A",
+      "bytes": 5831,
+      "sha256": "7bf4b49ea5af687b989d86bd4637c6560ad870cf1cca2ec3c3f7cbd2fd12ed86",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/boot/uboot-t153/files/board/dshanpi/t153/reset.c",
+      "change": "A",
+      "bytes": 4357,
+      "sha256": "f3cc4232b39ee94aa119ecfb9c7795bc20558ef1706f1d1710ec06114073e7f7",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/boot/uboot-t153/files/board/dshanpi/t153/smp-dt.c",
+      "change": "A",
+      "bytes": 2661,
+      "sha256": "49b48dd6aef98a4f93166b9014b585e698db6704b14970a0173acec86188a31a",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/boot/uboot-t153/files/board/dshanpi/t153/spl.c",
+      "change": "A",
+      "bytes": 1994,
+      "sha256": "324e54bc0ebea87ec351cbba7b602a43d38037f514a181ba9828cabcdf949e53",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/boot/uboot-t153/files/board/dshanpi/t153/sunxi_mmc.h",
+      "change": "A",
+      "bytes": 5374,
+      "sha256": "5a7a55782ec872eb3a7227093739c4e23c48658eb4d922aadba22c7d8fd584aa",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/boot/uboot-t153/files/board/dshanpi/t153/t153.h",
+      "change": "A",
+      "bytes": 160,
+      "sha256": "bf3b65b4581d6ff1d2b46a21c5a9383ebe4ec59c46687dfce2243694869a59c3",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/boot/uboot-t153/files/configs/dshanpi_t153_ram_defconfig",
+      "change": "A",
+      "bytes": 1334,
+      "sha256": "eeb9ba771ddf3c03fe403c85ca885bd524251d8c1d23c363dfd175618383c7d2",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/boot/uboot-t153/files/configs/dshanpi_t153_source_1g_defconfig",
+      "change": "A",
+      "bytes": 2432,
+      "sha256": "063503fd4596c1caf21206cfa8972ab6e59c31c4901e71ea32aaecd6ab9d43d1",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/boot/uboot-t153/files/configs/dshanpi_t153_source_1g_smp_defconfig",
+      "change": "A",
+      "bytes": 2803,
+      "sha256": "fecd1b63fd8753a61f792358310c32c5ad910bee82b3eadf36478b443a1a45f2",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/boot/uboot-t153/files/configs/dshanpi_t153_source_defconfig",
+      "change": "A",
+      "bytes": 2401,
+      "sha256": "382363e457207c0b00b3939c920aa3611fdd47fbfd81e4bbac7ed134352e1339",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/boot/uboot-t153/files/include/configs/dshanpi_t153_ram.h",
+      "change": "A",
+      "bytes": 1493,
+      "sha256": "1061aef89683f2405203495b29fe0d33a3d1fdb3a49494bc480e00b3beb60ffa",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/boot/uboot-t153/patches/100-arm-add-t153-source-target.patch",
+      "change": "A",
+      "bytes": 2273,
+      "sha256": "33e0633d30bc27d8999c18ba2c3654f5bb7de606e6835ee0d1c24c9ba2e41d79",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/boot/uboot-t153/tools/pack-bootarea.py",
+      "change": "A",
+      "bytes": 10896,
+      "sha256": "49d7adb0d933903047d3c8b789c2424a940a24b6238ac04ba7f1672dc6be965b",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/kernel/aic8800-t153-sdio/Makefile",
+      "change": "A",
+      "bytes": 3679,
+      "sha256": "7a93b30595ac13388d12a4c9be613cc004dbb0e69a6ae48b2ec0b831f30db7d8",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/kernel/aic8800-t153-sdio/files/FIRMWARE-NOTICE.txt",
+      "change": "A",
+      "bytes": 958,
+      "sha256": "459249f5e8b0e807c929ea80d1c06b4f813be3c2ddd0ffe265fa4f0025d2ae26",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/kernel/aic8800-t153-sdio/files/firmware-sha256.json",
+      "change": "A",
+      "bytes": 1610,
+      "sha256": "f4f406561550ef31c0d0e9890a97ef82fabc0a8dace47e8ab70f36c8f7bc7866",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/kernel/aic8800-t153-sdio/files/t153-bluetooth.dts.txt",
+      "change": "A",
+      "bytes": 843,
+      "sha256": "0e132eedda731b6362aacc0cc42502ce034eeb671ecff9711e1f9bd168f9fddc",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/kernel/aic8800-t153-sdio/patches/100-radxa-sdio-maintenance.patch",
+      "change": "A",
+      "bytes": 54502,
+      "sha256": "d5ef96e67bb47b049b2019057b48f046b66e1f16ffdcc1230804699d4d84ce8c",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/kernel/aic8800-t153-sdio/patches/200-t153-sdio-firmware.patch",
+      "change": "A",
+      "bytes": 6477,
+      "sha256": "12c16d0e5c250c4a5348d5dbb2ac914079e4ecf885ee12759a1b9d719eb0cdf8",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/kernel/aic8800-t153-sdio/patches/300-openwrt-cfg80211.patch",
+      "change": "A",
+      "bytes": 36994,
+      "sha256": "198e0b43da5cbc207a486937717d42c25786da3116d83e27bf4ca67ee3d94bae",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/system/procd/patches/900-system-reboot-command.patch",
+      "change": "A",
+      "bytes": 3878,
+      "sha256": "2482abc12c011ae8d501c8382a6160e6f679a87e0bf192977d90900a186a5af7",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/utils/aic8800d80-bt/HARDWARE-NOTES.txt",
+      "change": "A",
+      "bytes": 4708,
+      "sha256": "f2d21b158d9b43b0a7ea8a858e44645a7a860478dcae3f1a65c145a567f12038",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/utils/aic8800d80-bt/Makefile",
+      "change": "A",
+      "bytes": 1438,
+      "sha256": "0d6a37bd4c5f1d17d7a95a8816edb90a7a24f7ae4e475e74213eb346b2b05bf2",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/utils/aic8800d80-bt/README.txt",
+      "change": "A",
+      "bytes": 4674,
+      "sha256": "38657ded4d5cf3c6dbb6c8c66cc0461d08e146b2aaa89aa9c4137e2cfaa8c82b",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/utils/aic8800d80-bt/files/aic8800d80-bt.config",
+      "change": "A",
+      "bytes": 255,
+      "sha256": "92ed4aaa54b49970d9802360b4e547c2769f9a0ab1bb131a9e88ce508086230d",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/utils/aic8800d80-bt/files/aic8800d80-bt.init",
+      "change": "A",
+      "bytes": 1555,
+      "sha256": "8ba094eb64df49bea95b3eb5101ab882bf3a2a0bbba28f636a26c1fad679482d",
+      "git_mode": "100755"
+    },
+    {
+      "path": "package/utils/aic8800d80-bt/src/aic8800d80-bt.c",
+      "change": "A",
+      "bytes": 12501,
+      "sha256": "ac115bc4b17ddb74fdcffffb667f0f02a73550b8b92fba9d6a56ad7c47e69424",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/utils/aic8800d80-bt/tests/evidence.json",
+      "change": "A",
+      "bytes": 4872,
+      "sha256": "edbadd02e8c1732c8204fbe10658ae8b1f080e15d29e4e64ad3b216de09dbea0",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/utils/aic8800d80-bt/tests/shutdown-evidence.json",
+      "change": "A",
+      "bytes": 809,
+      "sha256": "5837510a338990af41694761f81f0b271290101b2124c30b21cc28f3a15b5487",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/utils/aic8800d80-bt/tests/test-helper.c",
+      "change": "A",
+      "bytes": 5076,
+      "sha256": "b66a5fced15ea1dca7a08f94afc399d7b07896ffa74dc37b512412898799f037",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/utils/aic8800d80-bt/tests/test-shutdown.c",
+      "change": "A",
+      "bytes": 4542,
+      "sha256": "deb2253f02c252e5ed353c7e965db3a4fba9995175f81e9ff29956ff501d3be3",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/utils/busybox/patches/900-reboot-mode-via-procd.patch",
+      "change": "A",
+      "bytes": 2121,
+      "sha256": "8313c88dc468b10027b60814a73be1037fd2e149ba2d571329d25f6cc75f141b",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/utils/t153-immortal-defaults/Makefile",
+      "change": "A",
+      "bytes": 650,
+      "sha256": "ee533e95b413862d8103ee1f879065e5c7a1b2c4f246c49c329bfd1f48ab1caf",
+      "git_mode": "100644"
+    },
+    {
+      "path": "package/utils/t153-immortal-defaults/files/99-t153-immortal",
+      "change": "A",
+      "bytes": 1254,
+      "sha256": "b734e0f3a825280c27c1ffa328e0a0e999027cfc1c74d6538f917520a30d43bb",
+      "git_mode": "100755"
+    },
+    {
+      "path": "target/linux/sunxi/base-files/etc/board.d/02_network",
+      "change": "M",
+      "bytes": 2151,
+      "sha256": "aca51dd7725f697ed37140401fd88ab4e2dcb99488e9c57d208bfab57c1ae057",
+      "git_mode": "100644",
+      "upstream_sha256": "fd66afbf9e4b09e9579c1a6177548e6d421e87efd464531e0149283fb0ceb226"
+    },
+    {
+      "path": "target/linux/sunxi/base-files/lib/upgrade/platform.sh",
+      "change": "M",
+      "bytes": 3100,
+      "sha256": "0c5ce8ec1c16a0e57cc29a2bd1476bf7b4f8f9cb54b61a0b453d37d9649acebd",
+      "git_mode": "100644",
+      "upstream_sha256": "ea1d688d9d0e8e44e058f9451e834deca04d724727f37ce5c499116d2c9bb65d"
+    },
+    {
+      "path": "target/linux/sunxi/base-files/usr/sbin/t153-report",
+      "change": "A",
+      "bytes": 1163,
+      "sha256": "182e47f21b91437051076b29d6f83adca9c6c1f3a33889416cb8322f8f6e1867",
+      "git_mode": "100755"
+    },
+    {
+      "path": "target/linux/sunxi/cortexa7/config-6.12",
+      "change": "M",
+      "bytes": 1756,
+      "sha256": "1e2ffcb4fda5474b1c357f07ff3dcba81a5c7bddebe4b85e8ed2ca39b127b14e",
+      "git_mode": "100644",
+      "upstream_sha256": "69d3648e72c7024148be47714b3e162c2a61e0826496e70542be9059dacff364"
+    },
+    {
+      "path": "target/linux/sunxi/files/Documentation/devicetree/bindings/net/allwinner,sun8i-t153-dwmac.yaml",
+      "change": "A",
+      "bytes": 1675,
+      "sha256": "fe45b365a0ca23ecec6893af7aa1661c90a4f634970cc9f10345a04828a41662",
+      "git_mode": "100644"
+    },
+    {
+      "path": "target/linux/sunxi/files/Documentation/devicetree/bindings/net/can/allwinner,sun8i-t153-can.yaml",
+      "change": "A",
+      "bytes": 3408,
+      "sha256": "7159e98d72503dab275c6a97907cfcf3bba022aa958587c07164a83a99cf9a53",
+      "git_mode": "100644"
+    },
+    {
+      "path": "target/linux/sunxi/files/Documentation/devicetree/bindings/phy/allwinner,sun8i-t153-usb-phy.yaml",
+      "change": "A",
+      "bytes": 1042,
+      "sha256": "9dc6b215a92072ec09ccf2827c8c5730f5538b278d888c9435cec117c2f61f32",
+      "git_mode": "100644"
+    },
+    {
+      "path": "target/linux/sunxi/files/Documentation/devicetree/bindings/power/reset/allwinner,sun8i-t153-reboot-mode.yaml",
+      "change": "A",
+      "bytes": 1110,
+      "sha256": "9d204f8d7d0dbc2c638f416f56c8b517d3cf14942c7b6c6340ad52a336354113",
+      "git_mode": "100644"
+    },
+    {
+      "path": "target/linux/sunxi/files/arch/arm/boot/dts/allwinner/sun8i-t153-dshanpi-omnigate.dts",
+      "change": "A",
+      "bytes": 4891,
+      "sha256": "4178dd9df7fce493980fa023ff86c11f82e06cf98260471d53675b1289232f85",
+      "git_mode": "100644"
+    },
+    {
+      "path": "target/linux/sunxi/files/arch/arm/boot/dts/allwinner/sun8i-t153.dtsi",
+      "change": "A",
+      "bytes": 12865,
+      "sha256": "5552edc21095083949963257ec723463fb052783d36278b0e01ae43f5ba6a96a",
+      "git_mode": "100644"
+    },
+    {
+      "path": "target/linux/sunxi/files/drivers/clk/sunxi-ng/ccu-sun8i-t153.c",
+      "change": "A",
+      "bytes": 23016,
+      "sha256": "76efb2dd34cdb0c04a0145e25d85ec58a565f1df643742ac9c3ac21b5c3d060a",
+      "git_mode": "100644"
+    },
+    {
+      "path": "target/linux/sunxi/files/drivers/net/can/m_can/m_can_sun8i_t153.c",
+      "change": "A",
+      "bytes": 7204,
+      "sha256": "83daaa2dda322c2ff84466b57b52a97077be126604bcfbcec868ecb52cdb6e6f",
+      "git_mode": "100644"
+    },
+    {
+      "path": "target/linux/sunxi/files/drivers/net/ethernet/stmicro/stmmac/dwmac-sun8i-t153.c",
+      "change": "A",
+      "bytes": 4748,
+      "sha256": "73506d3d4cb309131e25fab5ee22633c14d031b4c3a2be45868e1264d740646a",
+      "git_mode": "100644"
+    },
+    {
+      "path": "target/linux/sunxi/files/drivers/phy/allwinner/phy-sun8i-t153-usb.c",
+      "change": "A",
+      "bytes": 5248,
+      "sha256": "6452e6c818584b094393829c342986fb1b13441dede2dbb7061c1c739073a830",
+      "git_mode": "100644"
+    },
+    {
+      "path": "target/linux/sunxi/files/drivers/pinctrl/sunxi/pinctrl-sun8i-t153.c",
+      "change": "A",
+      "bytes": 76834,
+      "sha256": "6bc623ba1967ba1fe2bddf60c771bf4729b0c306c8e3a4ccc0fc72c66dd5563a",
+      "git_mode": "100644"
+    },
+    {
+      "path": "target/linux/sunxi/files/drivers/power/reset/sun8i-t153-reboot-mode.c",
+      "change": "A",
+      "bytes": 2278,
+      "sha256": "b053f363206c9169c0552770509cc92e8d258c35aa27f5d2d241799edc2dd7dd",
+      "git_mode": "100644"
+    },
+    {
+      "path": "target/linux/sunxi/files/include/dt-bindings/clock/sun8i-t153-ccu.h",
+      "change": "A",
+      "bytes": 6867,
+      "sha256": "f1f35df42f92ae66b8272982f0bb9cc97fadd63a309369451108d2c11f960140",
+      "git_mode": "100644"
+    },
+    {
+      "path": "target/linux/sunxi/files/include/dt-bindings/reset/sun8i-t153-ccu.h",
+      "change": "A",
+      "bytes": 2880,
+      "sha256": "42ea5d3eeef3c65523b83bd9760ae837816ee32445aa45f094e51951e93c377c",
+      "git_mode": "100644"
+    },
+    {
+      "path": "target/linux/sunxi/image/Config.in",
+      "change": "M",
+      "bytes": 328,
+      "sha256": "50afdbf1cad9dcd7944e2661edc691cbc05945cf4391fef4104812bcfa7665aa",
+      "git_mode": "100644",
+      "upstream_sha256": "7a71e6c01599810a9a34212591bb7113dfb79c1e475284eb9dcac8ddc999c0e1"
+    },
+    {
+      "path": "target/linux/sunxi/image/Makefile",
+      "change": "M",
+      "bytes": 1404,
+      "sha256": "d1c0ff5b82c95b257dea54562ae753328611c4791b15a169ce1206785a5aa9f3",
+      "git_mode": "100644",
+      "upstream_sha256": "77eb8522f9f87ae2d2e4479fd13c181b74562fc63a4003725d48f747f5cf56af"
+    },
+    {
+      "path": "target/linux/sunxi/image/gen_t153_sdcard_img.sh",
+      "change": "A",
+      "bytes": 4338,
+      "sha256": "6ef2eaa27575a0508c40f1d19320f19fd77540a2b468d249f66eb61116b57d3a",
+      "git_mode": "100755"
+    },
+    {
+      "path": "target/linux/sunxi/image/t153.bootscript",
+      "change": "A",
+      "bytes": 483,
+      "sha256": "dc8a0d090e153f3d74c1b7520f4a04f4ebce56cb5647cab680b00163d2704d2d",
+      "git_mode": "100644"
+    },
+    {
+      "path": "target/linux/sunxi/image/t153.mk",
+      "change": "A",
+      "bytes": 2255,
+      "sha256": "3f13f6e90b2da6b05c98cf61d8de90768322f63e85e3ca15c3296fd23ce78719",
+      "git_mode": "100644"
+    },
+    {
+      "path": "target/linux/sunxi/modules.mk",
+      "change": "M",
+      "bytes": 3697,
+      "sha256": "83f477f123137ac6dd4323bb2f92d7d278c082bfb3453aac0c9a17f83b4f80d9",
+      "git_mode": "100644",
+      "upstream_sha256": "53df6f241a962df4e3c47f6d50eff0b903e3948487473e85471e19ce500f6d3c"
+    },
+    {
+      "path": "target/linux/sunxi/patches-6.12/500-pinctrl-sunxi-add-T153-register-layout.patch",
+      "change": "A",
+      "bytes": 5552,
+      "sha256": "dcb089c07a2b812593cbefd69f535d789479465a2bff028f134195908ca2109a",
+      "git_mode": "100644"
+    },
+    {
+      "path": "target/linux/sunxi/patches-6.12/501-clk-sunxi-ng-add-T153-core-and-IO-clocks.patch",
+      "change": "A",
+      "bytes": 525,
+      "sha256": "ab322548a9454ffd72e37b232ca207e9222513132f414636c7cf5314ab4026d5",
+      "git_mode": "100644"
+    },
+    {
+      "path": "target/linux/sunxi/patches-6.12/502-net-stmmac-add-T153-glue.patch",
+      "change": "A",
+      "bytes": 586,
+      "sha256": "c993e262b806afaa60b5d478355f88192c2558f11733e768fd8f9030510ed28d",
+      "git_mode": "100644"
+    },
+    {
+      "path": "target/linux/sunxi/patches-6.12/503-ARM-add-T153-machine-and-OmniGate-DTB.patch",
+      "change": "A",
+      "bytes": 728,
+      "sha256": "1c22c82f80ecfe59b206aaaea20522a688a50bc3a438ca34d16265eb2eee7bef",
+      "git_mode": "100644"
+    },
+    {
+      "path": "target/linux/sunxi/patches-6.12/504-mmc-sunxi-add-T153-SMHC2.patch",
+      "change": "A",
+      "bytes": 4733,
+      "sha256": "931a24cc51494f4d77dcc3a2f4a7a6e450de87bb1e1dcbe780567e8b71d78fd9",
+      "git_mode": "100644"
+    },
+    {
+      "path": "target/linux/sunxi/patches-6.12/505-phy-add-T153-USB2-host-PHY.patch",
+      "change": "A",
+      "bytes": 660,
+      "sha256": "36e78475164d6ab05fd4cb0915b0597d6ff83f7dc807b4971d16a7ef9e0be219",
+      "git_mode": "100644"
+    },
+    {
+      "path": "target/linux/sunxi/patches-6.12/506-can-add-T153-M_CAN-glue.patch",
+      "change": "A",
+      "bytes": 534,
+      "sha256": "ae497383b84d803245379f8875d13131f59bda537c42049c9def72d66d8b5e3d",
+      "git_mode": "100644"
+    },
+    {
+      "path": "target/linux/sunxi/patches-6.12/507-dt-bindings-add-T153-hardware.patch",
+      "change": "A",
+      "bytes": 4822,
+      "sha256": "b97b0399b5859f3f8eed16da0e03f1189d451aa9cfdf0ddfbf1a45e27421b766",
+      "git_mode": "100644"
+    },
+    {
+      "path": "target/linux/sunxi/patches-6.12/508-watchdog-sunxi-add-T153-reset-output.patch",
+      "change": "A",
+      "bytes": 3030,
+      "sha256": "fd2473af049c37eff6fcaa5c5e9a7e990b8626da4fb0b91a61f573c2c8b73c1d",
+      "git_mode": "100644"
+    },
+    {
+      "path": "target/linux/sunxi/patches-6.12/509-reboot-mode-allow-explicit-zero-value.patch",
+      "change": "A",
+      "bytes": 1745,
+      "sha256": "b60330a92ac94703216eec48623799674ce76a0df4a3cbdf35174dc2736f0bb2",
+      "git_mode": "100644"
+    },
+    {
+      "path": "target/linux/sunxi/patches-6.12/510-power-reset-add-T153-RTC-reboot-mode.patch",
+      "change": "A",
+      "bytes": 1048,
+      "sha256": "4822650ae4b611743b24cf7f6a1486d116ff8025df88a3b03d1980915f784c72",
+      "git_mode": "100644"
+    },
+    {
+      "path": "target/linux/sunxi/patches-6.12/511-serial-8250-dw-add-T153-FIFO-and-auto-flow-control.patch",
+      "change": "A",
+      "bytes": 5730,
+      "sha256": "7c7b10ac5e45d18edd8313b47e7e5fd4e8699f1aac519158fab1059a180e48d2",
+      "git_mode": "100644"
+    },
+    {
+      "path": "target/linux/sunxi/t153-modules.mk",
+      "change": "A",
+      "bytes": 557,
+      "sha256": "f9f5ae01540fbb156194ea22c307d41da396fd49ac682f38c5ca79401ebe3c46",
+      "git_mode": "100644"
+    }
+  ]
+}

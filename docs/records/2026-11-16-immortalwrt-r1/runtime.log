@@ -1,0 +1,138 @@
+echo T153_RUNTIME_BEGIN; cat /etc/openwrt_release; uname -r;
+
+
+ cat /sys/devices/system/cpu/online; free -m; uci -q get luci.main.mediaurlbase;
+
+
+ uci -q get luci.main.lang; uci -q get network.lan.ipaddr; ip -br link; ip -br a
+
+
+ddr; /etc/init.d/uhttpd status; wget -S -O /dev/null http://127.0.0.1/cgi-bin/lu
+
+
+ci 2>&1; dd if=/dev/mmcblk0 bs=1M count=4 2>/dev/null | sha256sum; echo T153_RUN
+
+
+TIME_DONE
+
+T153_RUNTIME_BEGIN
+
+DISTRIB_ID='ImmortalWrt'
+
+DISTRIB_RELEASE='25.12.2'
+
+DISTRIB_REVISION='r38135-0c4cd0f9920a'
+
+DISTRIB_TARGET='sunxi/cortexa7'
+
+DISTRIB_ARCH='arm_cortex-a7_neon-vfpv4'
+
+DISTRIB_DESCRIPTION='ImmortalWrt 25.12.2 r38135-0c4cd0f9920a'
+
+DISTRIB_TAINTS='no-all'
+
+6.12.103
+
+0-3
+
+              total        used        free      shared  buff/cache   available
+
+Mem:         375580       34392      318612         188       22576      305232
+
+Swap:             0           0           0
+
+/luci-static/argon
+
+zh_cn
+
+192.168.153.1/24
+
+lo               UNKNOWN        [MAC] <LOOPBACK,UP,LOWER_UP> 
+
+eth0             DOWN           [MAC] <NO-CARRIER,BROADCAST,MULTICAST,UP> 
+
+eth1             DOWN           [MAC] <NO-CARRIER,BROADCAST,MULTICAST,UP> 
+
+can0             DOWN           <NOARP,ECHO> 
+
+can1             DOWN           <NOARP,ECHO> 
+
+br-lan           DOWN           [MAC] <NO-CARRIER,BROADCAST,MULTICAST,UP> 
+
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+
+eth0             DOWN           
+
+eth1             DOWN           
+
+can0             DOWN           
+
+can1             DOWN           
+
+br-lan           DOWN           192.168.153.1/24 fd18:74a0:b335::1/60 
+
+running
+
+wget: unrecognized option: S
+
+Usage: wget [options] <URL>
+
+Options:
+
+	-4				Use IPv4 only
+
+	-6				Use IPv6 only
+
+	-O <file>			Redirect output to file (use "-" for stdout)
+
+	-P <dir>			Set directory for output files
+
+	--quiet | -q			Turn off status messages
+
+	--continue | -c			Continue a partially-downloaded file
+
+	--header='Header: value'	Add HTTP header. Multiple allowed
+
+	--user=<user>			HTTP authentication username
+
+	--password=<password>		HTTP authentication password
+
+	--user-agent | -U <str>		Set HTTP user agent
+
+	--post-data=STRING		use the POST method; send STRING as the data
+
+	--post-file=FILE		use the POST method; send FILE as the data
+
+	--method=METHOD		use the HTTP method e.g. PUT
+
+	--body-data=STRING		with --method send the STRING in body
+
+	--body-file=FILE		with --method send the FILE content in body
+
+	--spider | -s			Spider mode - only check file existence
+
+	--timeout=N | -T N		Set connect/request timeout to N seconds
+
+	--proxy=on | -Y on		Enable interpretation of proxy env vars (default)
+
+	--proxy=off | -Y off |
+
+	--no-proxy           		Disable interpretation of proxy env vars
+
+
+
+HTTPS options:
+
+	--ca-certificate=<cert>		Load CA certificates from file <cert>
+
+	--no-check-certificate		don't validate the server's certificate
+
+	--ciphers=<cipherlist>		Set the cipher list string
+
+
+
+de84c024b80a593dbbe1cd8d00beee40226e7c839dbaf7cf01967b007a2539d7  -
+
+T153_RUNTIME_DONE
+
+root@ImmortalWrt:~# 

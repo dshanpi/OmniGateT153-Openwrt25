@@ -1,0 +1,10 @@
+config SUNXI_SD_BOOT_PARTSIZE
+	int "Boot (SD Card) filesystem partition size (in MB)"
+	depends on TARGET_sunxi
+	default 32 if TARGET_sunxi_cortexa7_DEVICE_dshanpi_t153mx-omnigate
+	default 20
+
+# BEGIN T153 PORT
+config TARGET_ROOTFS_PARTSIZE
+    default 256 if TARGET_sunxi_cortexa7_DEVICE_dshanpi_t153mx-omnigate
+# END T153 PORT

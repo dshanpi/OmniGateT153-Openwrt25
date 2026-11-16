@@ -1,0 +1,13 @@
+{
+  "firmwarePath": "<absolute path to immortalwrt-sunxi-cortexa7-dshanpi_t153mx-omnigate-ext4-raw.img>",
+  "confirmDestructive": true,
+  "options": {
+    "mode": "command",
+    "verify": true,
+    "postFlashAction": "reboot",
+    "vendorOptions": {
+      "raw": true,
+      "loaderPath": "<absolute path to t153-fes-ddr933-ram-loader.img>"
+    }
+  }
+}

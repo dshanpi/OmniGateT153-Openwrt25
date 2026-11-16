@@ -1,0 +1,39 @@
+{
+  "recorded_at": "2026-11-16T19:51:12.559172+08:00",
+  "image_sha256": "2a0baa4305fda37071734b81a86ef468915f56b0cd828d3ab44bb18c961da853",
+  "flash": {
+    "taskId": "flash-1794829540052993700",
+    "state": "success",
+    "phase": "complete",
+    "progressPct": 100.0,
+    "currentPartition": "eMMC user area",
+    "committedBytes": 306184192,
+    "bytesPerSecond": 28916343.099188138,
+    "usbSpeed": "unknown",
+    "verifyState": "success",
+    "postFlashState": "success",
+    "error": null
+  },
+  "boot_and_runtime": {
+    "distribution": "ImmortalWrt 25.12.2",
+    "kernel": "6.12.103",
+    "cpus_online": "0-3",
+    "source_ddr_initialization": "passed",
+    "first_4MiB_disk_sha256_matches_image": true,
+    "first_4MiB_sha256": "de84c024b80a593dbbe1cd8d00beee40226e7c839dbaf7cf01967b007a2539d7",
+    "lan_address": "192.168.153.1/24",
+    "lan_link_observed": "1000Mbps full duplex",
+    "host_dhcp_address": "192.168.153.169",
+    "luci_login_html_retrieved_from_host": true,
+    "luci_unauthenticated_status": "403 with x-luci-login-required: yes; Argon login form returned",
+    "cold_power_cycle_tested": false,
+    "observed_limitation": "AIC Wi-Fi module power-on failed in this boot; not validated as working"
+  },
+  "prior_failure": {
+    "reported_stage": "SPL precheck in extra eMMC Boot0 path",
+    "exact_root_cause": "not established",
+    "successful_route": "raw eMMC user area, separate DDR933 FES, no extra Boot0 flag"
+  },
+  "release_tag": "v25.12.2-t153-immortalwrt-r1",
+  "same_binary_as_preview2": true
+}

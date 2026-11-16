@@ -1,0 +1,17 @@
+{
+  "taskId": "flash-1794829540052993700",
+  "state": "success",
+  "phase": "complete",
+  "progressPct": 100.0,
+  "currentPartition": "eMMC user area",
+  "committedBytes": 306184192,
+  "bytesPerSecond": 28916343.099188138,
+  "usbSpeed": "unknown",
+  "verifyState": "success",
+  "verifyMethod": null,
+  "postFlashState": "success",
+  "error": null,
+  "executableVersion": "openixcli 0.2.11",
+  "startedAt": 1794829540,
+  "finishedAt": 1794829581
+}
