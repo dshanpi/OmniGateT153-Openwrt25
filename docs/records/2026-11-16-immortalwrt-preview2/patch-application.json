@@ -1,0 +1,12 @@
+{
+  "result": "pass",
+  "method": "fresh official archive extraction + patch -p1 + byte comparison of every changed path",
+  "patch_filename": "immortalwrt-25.12.2-t153-preview2.patch",
+  "patch_sha256": "ea3aa43db99dcc2c6f947441a74b0711f5a6609220da43af1dd3f05344b60817",
+  "patch_bytes": 479687,
+  "source_archive_sha256": "1126f61d9d300d165221419f54fef847dda955c9cb80a817f4b71b7c2fa187eb",
+  "files_matched": 83,
+  "unchanged_upstream_version_epoch_and_feeds": true,
+  "image_verified": false,
+  "hardware_verified": false
+}

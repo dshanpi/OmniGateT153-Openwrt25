@@ -1,0 +1,31 @@
+OmniGate T153 — ImmortalWrt 25.12.2 preview.2 烧录
+
+适用：T153 四核 Cortex-A7 / 1 GiB DDR4 / eMMC。
+本目录包含重新生成的完整 raw 镜像、独立 FES、SHA256SUMS。
+
+选文件：
+  固件 / raw：immortalwrt-sunxi-cortexa7-dshanpi_t153mx-omnigate-ext4-raw.img
+  FES / loader：t153-fes-ddr933-ram-loader.img
+
+1. 备份配置；完整盘烧录会覆盖 eMMC 分区表及镜像范围。
+2. 板卡进入 FEL，USB 连接烧录电脑。
+3. 使用匹配本项目 DDR933 loader 的 LYNX/OpenixCLI raw 流程，目标 eMMC。
+4. 分别选择上述 raw 和 FES，启用写入校验、烧录后重启。
+5. 等待写入、校验、重启均成功，再查看串口启动输出。
+   UART0：3.3 V TTL，115200，8N1，无流控。
+6. 电脑网线直连 eth0/LAN，浏览器访问 http://192.168.153.1/。
+   eth1 为 WAN。VMware VMnet8 若占用同一网段，请先调整或停用。
+
+.img 直接选，不用解压；若下载的是 .img.gz，必须先解压。
+FES 只在 RAM 中运行，不是要写入 eMMC 的完整固件。
+不要使用 physical0 loader 或手动重复调整 +40960 扇区映射。
+不支持用 LuCI“刷写固件”或 sysupgrade 更新本完整盘。
+
+PowerShell 校验（在当前目录执行，对照 SHA256SUMS）：
+Get-FileHash '.\immortalwrt-sunxi-cortexa7-dshanpi_t153mx-omnigate-ext4-raw.img' -Algorithm SHA256
+Get-FileHash '.\t153-fes-ddr933-ram-loader.img' -Algorithm SHA256
+
+本版仍待实际烧录启动验收。此前 SPL 校验失败的根因尚未确定，
+不能将重新打包或软件校验通过视为已修复烧录工具/硬件问题。
+完整说明：README-ImmortalWrt-preview2.md
+发布：https://github.com/dshanpi/OmniGateT153-Openwrt25/releases/tag/v25.12.2-t153-immortalwrt-preview.2

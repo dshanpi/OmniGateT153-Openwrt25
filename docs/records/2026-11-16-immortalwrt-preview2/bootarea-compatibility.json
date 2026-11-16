@@ -1,0 +1,1098 @@
+{
+  "scope": "Software comparison of rebuilt source boot firmware against retained OpenWrt 25.12.6 baseline. No device or hardware test.",
+  "created_utc": "2026-11-16T11:25:34.493675+00:00",
+  "hardware_validation": false,
+  "files": {
+    "spl.bin": {
+      "old_sha256": "3a0924528fa82d67a87ac4d229be14393e35f90855972b66f7ee4b51a512d73e",
+      "new_sha256": "3a0924528fa82d67a87ac4d229be14393e35f90855972b66f7ee4b51a512d73e",
+      "old_bytes": 49152,
+      "new_bytes": 49152,
+      "byte_identical": true,
+      "changed_bytes_shared_length": 0,
+      "change_ranges": []
+    },
+    "u-boot.img": {
+      "old_sha256": "a4b9afbe7aae7a56749952a8615a00ebc74c2e51a5ed05579c8c900368772107",
+      "new_sha256": "cd966c7b213c494feb8f087bc0d1161e9d1401f81aa9e83dfae3be2217e44f0a",
+      "old_bytes": 271872,
+      "new_bytes": 271872,
+      "byte_identical": false,
+      "changed_bytes_shared_length": 29594,
+      "change_ranges": [
+        {
+          "start": 4,
+          "end_exclusive": 8,
+          "old_hex": "6458e3c8",
+          "new_hex": "e8076368",
+          "old_context": "b\"'\\x05\\x19VdX\\xe3\\xc8j\\xd4\\x0e\\x94\\x00\\x04%\\xc0J\\x00\\x00\\x00J\\x00\\x00\\x00i\\xe9\\x11\\xe5\"",
+          "new_context": "b\"'\\x05\\x19V\\xe8\\x07chj\\xd4\\x0e\\x94\\x00\\x04%\\xc0J\\x00\\x00\\x00J\\x00\\x00\\x00\\x02\\x89\\x91\\xad\""
+        },
+        {
+          "start": 24,
+          "end_exclusive": 28,
+          "old_hex": "69e911e5",
+          "new_hex": "028991ad",
+          "old_context": "b'dX\\xe3\\xc8j\\xd4\\x0e\\x94\\x00\\x04%\\xc0J\\x00\\x00\\x00J\\x00\\x00\\x00i\\xe9\\x11\\xe5\\x11\\x02\\x05\\x00U-Boot 2026.07-O'",
+          "new_context": "b'\\xe8\\x07chj\\xd4\\x0e\\x94\\x00\\x04%\\xc0J\\x00\\x00\\x00J\\x00\\x00\\x00\\x02\\x89\\x91\\xad\\x11\\x02\\x05\\x00U-Boot 2026.07-O'"
+        },
+        {
+          "start": 2232,
+          "end_exclusive": 2233,
+          "old_hex": "eb",
+          "new_hex": "ed",
+          "old_context": "b'\\x04\\x00\\xa0\\xe1\\x10@\\xbd\\xe8\\xef\\xff\\xff\\xea\\x08\\x00\\x9f\\xe5R\\xb0\\x00\\xeb\\xeb;\\x03J\\xcd\\x08\\x03J\\xe2\\x08\\x03J\\x01\\x00\\xa0\\xe3\\x1e\\xff/\\xe1p'",
+          "new_context": "b'\\x04\\x00\\xa0\\xe1\\x10@\\xbd\\xe8\\xef\\xff\\xff\\xea\\x08\\x00\\x9f\\xe5R\\xb0\\x00\\xeb\\xed;\\x03J\\xcd\\x08\\x03J\\xe2\\x08\\x03J\\x01\\x00\\xa0\\xe3\\x1e\\xff/\\xe1p'"
+        },
+        {
+          "start": 4940,
+          "end_exclusive": 4941,
+          "old_hex": "e1",
+          "new_hex": "e3",
+          "old_context": "b'E\\n\\x03Ji\\n\\x03J\\x99\\n\\x03J\\xc9\\n\\x03J\\xfe\\x0c\\x03J\\xe16\\x03J\\x95p\\x03J\\xd9\\n\\x03J\\xf8\\n\\x03J\\xeb\\t\\x03J\\xf3'",
+          "new_context": "b'E\\n\\x03Ji\\n\\x03J\\x99\\n\\x03J\\xc9\\n\\x03J\\xfe\\x0c\\x03J\\xe36\\x03J\\x97p\\x03J\\xd9\\n\\x03J\\xf8\\n\\x03J\\xeb\\t\\x03J\\xf3'"
+        },
+        {
+          "start": 4944,
+          "end_exclusive": 4945,
+          "old_hex": "95",
+          "new_hex": "97",
+          "old_context": "b'i\\n\\x03J\\x99\\n\\x03J\\xc9\\n\\x03J\\xfe\\x0c\\x03J\\xe16\\x03J\\x95p\\x03J\\xd9\\n\\x03J\\xf8\\n\\x03J\\xeb\\t\\x03J\\xf3\\t\\x03J\\x94'",
+          "new_context": "b'i\\n\\x03J\\x99\\n\\x03J\\xc9\\n\\x03J\\xfe\\x0c\\x03J\\xe36\\x03J\\x97p\\x03J\\xd9\\n\\x03J\\xf8\\n\\x03J\\xeb\\t\\x03J\\xf3\\t\\x03J\\x96'"
+        },
+        {
+          "start": 4964,
+          "end_exclusive": 4965,
+          "old_hex": "94",
+          "new_hex": "96",
+          "old_context": "b'\\x95p\\x03J\\xd9\\n\\x03J\\xf8\\n\\x03J\\xeb\\t\\x03J\\xf3\\t\\x03J\\x94p\\x03J\\x10@-\\xe9\\x00@\\xa0\\xe1\\x18\\x00\\x9f\\xe51\\xb1\\x00\\xeb<'",
+          "new_context": "b'\\x97p\\x03J\\xd9\\n\\x03J\\xf8\\n\\x03J\\xeb\\t\\x03J\\xf3\\t\\x03J\\x96p\\x03J\\x10@-\\xe9\\x00@\\xa0\\xe1\\x18\\x00\\x9f\\xe51\\xb1\\x00\\xeb<'"
+        },
+        {
+          "start": 6416,
+          "end_exclusive": 6417,
+          "old_hex": "85",
+          "new_hex": "87",
+          "old_context": "b\"'}\\x00\\xebl\\xff\\xff\\xea\\x97\\x0c\\x03J\\x9d\\x0c\\x03J\\xcc\\x0c\\x03J\\x85C\\x03J\\xd6\\x0c\\x03J\\xd2\\x0c\\x03J\\xdb\\x0c\\x03J\\x95\\xc1\\xba^\\xe6\"",
+          "new_context": "b\"'}\\x00\\xebl\\xff\\xff\\xea\\x97\\x0c\\x03J\\x9d\\x0c\\x03J\\xcc\\x0c\\x03J\\x87C\\x03J\\xd6\\x0c\\x03J\\xd2\\x0c\\x03J\\xdb\\x0c\\x03J\\x95\\xc1\\xba^\\xe6\""
+        },
+        {
+          "start": 6468,
+          "end_exclusive": 6469,
+          "old_hex": "11",
+          "new_hex": "13",
+          "old_context": "b'\\x95\\xc1\\xba`\\xfa\\x0c\\x03J\\x95\\xc1\\xbaa\\x01\\r\\x03J\\t\\r\\x03J\\x11\\x8d\\x03J\\r\\r\\x03J\\x12\\r\\x03J\\xb2\\x0c\\x03J\\xcar\\x03J\\xbe'",
+          "new_context": "b'\\x95\\xc1\\xba`\\xfa\\x0c\\x03J\\x95\\xc1\\xbaa\\x01\\r\\x03J\\t\\r\\x03J\\x13\\x8d\\x03J\\r\\r\\x03J\\x12\\r\\x03J\\xb2\\x0c\\x03J\\xccr\\x03J\\xbe'"
+        },
+        {
+          "start": 6484,
+          "end_exclusive": 6485,
+          "old_hex": "ca",
+          "new_hex": "cc",
+          "old_context": "b'\\t\\r\\x03J\\x11\\x8d\\x03J\\r\\r\\x03J\\x12\\r\\x03J\\xb2\\x0c\\x03J\\xcar\\x03J\\xbe\\x0c\\x03Jp@-\\xe9\\x0fP\\xa0\\xe3\\x02`\\xa0\\xe3\\\\'",
+          "new_context": "b'\\t\\r\\x03J\\x13\\x8d\\x03J\\r\\r\\x03J\\x12\\r\\x03J\\xb2\\x0c\\x03J\\xccr\\x03J\\xbe\\x0c\\x03Jp@-\\xe9\\x0fP\\xa0\\xe3\\x02`\\xa0\\xe3\\\\'"
+        },
+        {
+          "start": 10904,
+          "end_exclusive": 10905,
+          "old_hex": "11",
+          "new_hex": "13",
+          "old_context": "b'\\xcc\\x0c\\x03J\\xd6\\x0c\\x03J\\xd2\\x0c\\x03J\\xdb\\x0c\\x03J\\t\\r\\x03J\\x11\\x8d\\x03J\\x95\\xc1\\xba`\\xfa\\x0c\\x03J\\r\\r\\x03J\\x12\\r\\x03J\\x97'",
+          "new_context": "b'\\xcc\\x0c\\x03J\\xd6\\x0c\\x03J\\xd2\\x0c\\x03J\\xdb\\x0c\\x03J\\t\\r\\x03J\\x13\\x8d\\x03J\\x95\\xc1\\xba`\\xfa\\x0c\\x03J\\r\\r\\x03J\\x12\\r\\x03J\\x97'"
+        },
+        {
+          "start": 10932,
+          "end_exclusive": 10933,
+          "old_hex": "ca",
+          "new_hex": "cc",
+          "old_context": "b'\\xfa\\x0c\\x03J\\r\\r\\x03J\\x12\\r\\x03J\\x97\\x0c\\x03J\\xb2\\x0c\\x03J\\xcar\\x03J\\xcc\\x0e\\x03J\\xbe\\x0c\\x03J\\xd0\\x0e\\x03J\\x02\\xc0\\xa0\\xe1\\x03'",
+          "new_context": "b'\\xfa\\x0c\\x03J\\r\\r\\x03J\\x12\\r\\x03J\\x97\\x0c\\x03J\\xb2\\x0c\\x03J\\xccr\\x03J\\xcc\\x0e\\x03J\\xbe\\x0c\\x03J\\xd0\\x0e\\x03J\\x02\\xc0\\xa0\\xe1\\x03'"
+        },
+        {
+          "start": 13760,
+          "end_exclusive": 13761,
+          "old_hex": "95",
+          "new_hex": "97",
+          "old_context": "b'\\xa3\\xa8\\x00\\xebd\\xfd\\xff\\xeb\\x10@\\xbd\\xe8/Q\\x00\\xea&\\x13\\x03J\\x95p\\x03J>\\x13\\x03J\\x01\\x0bP\\xe3\\x10\\x00\\x00\\x1a\\x10@-\\xe9\\x10'",
+          "new_context": "b'\\xa3\\xa8\\x00\\xebd\\xfd\\xff\\xeb\\x10@\\xbd\\xe8/Q\\x00\\xea&\\x13\\x03J\\x97p\\x03J>\\x13\\x03J\\x01\\x0bP\\xe3\\x10\\x00\\x00\\x1a\\x10@-\\xe9\\x10'"
+        },
+        {
+          "start": 14424,
+          "end_exclusive": 14425,
+          "old_hex": "eb",
+          "new_hex": "ed",
+          "old_context": "b'\\x04\\x00\\xa0\\xe1\\xa0\\xf4\\xff\\xeb$\\x00\\x9f\\xe508\\x00\\xeb\\xf1\\xff\\xff\\xea\\xeb;\\x03J\\xfa\\x13\\x03J\\xe3\\x13\\x03J \\x14\\x03J\\x1f\\x14\\x03J\\x11'",
+          "new_context": "b'\\x04\\x00\\xa0\\xe1\\xa0\\xf4\\xff\\xeb$\\x00\\x9f\\xe508\\x00\\xeb\\xf1\\xff\\xff\\xea\\xed;\\x03J\\xfa\\x13\\x03J\\xe3\\x13\\x03J \\x14\\x03J\\x1f\\x14\\x03J\\x11'"
+        },
+        {
+          "start": 14856,
+          "end_exclusive": 14857,
+          "old_hex": "eb",
+          "new_hex": "ed",
+          "old_context": "b'\\x1e\\xff/\\xe1\\x95\\x14\\x03J]\\x13\\x03J\\x9c\\x14\\x03J\\xa5\\x14\\x03J\\xeb;\\x03J\\x1e\\xff/\\xe1\\x1e\\xff/\\xe1p@-\\xe9\\x00@\\xa0\\xe1\\x01'",
+          "new_context": "b'\\x1e\\xff/\\xe1\\x95\\x14\\x03J]\\x13\\x03J\\x9c\\x14\\x03J\\xa5\\x14\\x03J\\xed;\\x03J\\x1e\\xff/\\xe1\\x1e\\xff/\\xe1p@-\\xe9\\x00@\\xa0\\xe1\\x01'"
+        },
+        {
+          "start": 15620,
+          "end_exclusive": 15621,
+          "old_hex": "4d",
+          "new_hex": "4f",
+          "old_context": "b'\\x000\\x87\\xe5\\xf0\\x8d\\xbd\\xe8\\x11\\x15\\x03J\\r\\x15\\x03J\\x19\\x15\\x03JMC\\x03J6\\x15\\x03J\"\\x15\\x03J\\x00 \\xa0\\xe1\\x04\\x10\\x9f\\xe5\\x04'",
+          "new_context": "b'\\x000\\x87\\xe5\\xf0\\x8d\\xbd\\xe8\\x11\\x15\\x03J\\r\\x15\\x03J\\x19\\x15\\x03JOC\\x03J6\\x15\\x03J\"\\x15\\x03J\\x00 \\xa0\\xe1\\x04\\x10\\x9f\\xe5\\x04'"
+        },
+        {
+          "start": 18400,
+          "end_exclusive": 18401,
+          "old_hex": "94",
+          "new_hex": "96",
+          "old_context": "b'\\x10@\\xbd\\xe8\\x00\\x10\\xa0\\xe3\\x04 \\x9f\\xe5\\x98\\x9a\\x00\\xea\\x82 \\x03J\\x94p\\x03J\\xf3A-\\xe9\\x00@\\xa0\\xe1@\\x02\\x9f\\xe5\\x02`\\xa0\\xe1\\x03'",
+          "new_context": "b'\\x10@\\xbd\\xe8\\x00\\x10\\xa0\\xe3\\x04 \\x9f\\xe5\\x98\\x9a\\x00\\xea\\x82 \\x03J\\x96p\\x03J\\xf3A-\\xe9\\x00@\\xa0\\xe1@\\x02\\x9f\\xe5\\x02`\\xa0\\xe1\\x03'"
+        },
+        {
+          "start": 19044,
+          "end_exclusive": 19045,
+          "old_hex": "52",
+          "new_hex": "54",
+          "old_context": "b'\\xce \\x03J\\xdc \\x03J\\xf2 \\x03J\\x0c!\\x03J1!\\x03JR=\\x03J\\x14!\\x03JT!\\x03JL!\\x03Jr!\\x03J\\x85'",
+          "new_context": "b'\\xce \\x03J\\xdc \\x03J\\xf2 \\x03J\\x0c!\\x03J1!\\x03JT=\\x03J\\x14!\\x03JT!\\x03JL!\\x03Jr!\\x03J\\x85'"
+        },
+        {
+          "start": 21192,
+          "end_exclusive": 21193,
+          "old_hex": "eb",
+          "new_hex": "ed",
+          "old_context": "b'\\x8f\"\\x03J\\xbe\"\\x03J\\xcf\"\\x03J\\x00\\x00\\x9f\\xe5eY\\x00\\xea\\xeb;\\x03J\\xf7@-\\xe9\\x00P\\xa0\\xe1\\x97m\\x00\\xeb\\x00@P\\xe2\\x04'",
+          "new_context": "b'\\x8f\"\\x03J\\xbe\"\\x03J\\xcf\"\\x03J\\x00\\x00\\x9f\\xe5eY\\x00\\xea\\xed;\\x03J\\xf7@-\\xe9\\x00P\\xa0\\xe1\\x97m\\x00\\xeb\\x00@P\\xe2\\x04'"
+        },
+        {
+          "start": 21472,
+          "end_exclusive": 21473,
+          "old_hex": "eb",
+          "new_hex": "ed",
+          "old_context": "b'\\x00\\x10\\xa0\\xe1\\x18\\x00\\x9f\\xe5\\xc4\\xff\\xff\\xea\\xfc\"\\x03J \\x14\\x03J\\xeb;\\x03J\\x0c#\\x03J1#\\x03JS#\\x03Jb#\\x03J7'",
+          "new_context": "b'\\x00\\x10\\xa0\\xe1\\x18\\x00\\x9f\\xe5\\xc4\\xff\\xff\\xea\\xfc\"\\x03J \\x14\\x03J\\xed;\\x03J\\x0c#\\x03J1#\\x03JS#\\x03Jb#\\x03J7'"
+        },
+        {
+          "start": 21964,
+          "end_exclusive": 21965,
+          "old_hex": "f5",
+          "new_hex": "f7",
+          "old_context": "b'\\x00@\\xa0\\xe3\\xac\\xff\\xff\\xea\\xfa\\x06\\x03J\\xb6#\\x03J\\x16\"\\x03J\\xf58\\x03J\\xb2\\x0c\\x03J\\x0c$\\x03J\\xcc\\x0e\\x03J\\x07@-\\xe9\\xf0'",
+          "new_context": "b'\\x00@\\xa0\\xe3\\xac\\xff\\xff\\xea\\xfa\\x06\\x03J\\xb6#\\x03J\\x16\"\\x03J\\xf78\\x03J\\xb2\\x0c\\x03J\\x0c$\\x03J\\xcc\\x0e\\x03J\\x07@-\\xe9\\xf0'"
+        },
+        {
+          "start": 22832,
+          "end_exclusive": 22833,
+          "old_hex": "94",
+          "new_hex": "96",
+          "old_context": "b'p\\x80\\xbd\\xe8h$\\x03J\\x93$\\x03J\\xb1$\\x03J\\xc9$\\x03J\\x94p\\x03J\\x10@-\\xe9\\x00@\\xa0\\xe1\\x14\\x00\\x9f\\xe5\\xf4/\\x00\\xeb\\x04'",
+          "new_context": "b'p\\x80\\xbd\\xe8h$\\x03J\\x93$\\x03J\\xb1$\\x03J\\xc9$\\x03J\\x96p\\x03J\\x10@-\\xe9\\x00@\\xa0\\xe1\\x14\\x00\\x9f\\xe5\\xf4/\\x00\\xeb\\x04'"
+        },
+        {
+          "start": 23320,
+          "end_exclusive": 23321,
+          "old_hex": "8f",
+          "new_hex": "91",
+          "old_context": "b'\\x04\\x10\\xa0\\xe1\\x05\\x00\\xa0\\xe1\\xa3l\\x00\\xeb\\x00@\\xa0\\xe1\\xc8\\xff\\xff\\xea\\x8f|\\x03J\\xcc\\x0e\\x03JY%\\x03J\\x000\\x91\\xe5\\x00\\x00S\\xe3z'",
+          "new_context": "b'\\x04\\x10\\xa0\\xe1\\x05\\x00\\xa0\\xe1\\xa3l\\x00\\xeb\\x00@\\xa0\\xe1\\xc8\\xff\\xff\\xea\\x91|\\x03J\\xcc\\x0e\\x03JY%\\x03J\\x000\\x91\\xe5\\x00\\x00S\\xe3z'"
+        },
+        {
+          "start": 25768,
+          "end_exclusive": 25769,
+          "old_hex": "19",
+          "new_hex": "1b",
+          "old_context": "b'p0\\xef\\xe6\\x00\\x00\\xa0\\xe3\\x000\\xc4\\xe5\\x08\\xd0\\x8d\\xe2\\x10\\x80\\xbd\\xe8\\x19s\\x03J\\x13@-\\xe9\\x02@\\xa0\\xe1\\x040\\x8d\\xe2( \\x9f\\xe5\\x1c'",
+          "new_context": "b'p0\\xef\\xe6\\x00\\x00\\xa0\\xe3\\x000\\xc4\\xe5\\x08\\xd0\\x8d\\xe2\\x10\\x80\\xbd\\xe8\\x1bs\\x03J\\x13@-\\xe9\\x02@\\xa0\\xe1\\x040\\x8d\\xe2( \\x9f\\xe5\\x1c'"
+        },
+        {
+          "start": 25968,
+          "end_exclusive": 25969,
+          "old_hex": "5d",
+          "new_hex": "5f",
+          "old_context": "b'\\x10\\x80\\xbd\\xe8\\xb4\\x16\\x03J\\x020\\xa0\\xe1\\x00 \\x9f\\xe5G\\xff\\xff\\xea]=\\x03J\\x020\\xa0\\xe1\\x00 \\x9f\\xe5C\\xff\\xff\\xeak*\\x03J7'",
+          "new_context": "b'\\x10\\x80\\xbd\\xe8\\xb4\\x16\\x03J\\x020\\xa0\\xe1\\x00 \\x9f\\xe5G\\xff\\xff\\xea_=\\x03J\\x020\\xa0\\xe1\\x00 \\x9f\\xe5C\\xff\\xff\\xeak*\\x03J7'"
+        },
+        {
+          "start": 26816,
+          "end_exclusive": 26817,
+          "old_hex": "f9",
+          "new_hex": "fb",
+          "old_context": "b'\\xe3\\x9b\\x00\\xeb\\x01@\\x84\\xe2\\xf2\\xff\\xff\\xea\\x9f*\\x03J\\xb0*\\x03J\\xf9\\x92\\x03J\\xc5*\\x03J\\xd3*\\x03J\\xdc*\\x03J\\xe0*\\x03J\\x94'",
+          "new_context": "b'\\xe3\\x9b\\x00\\xeb\\x01@\\x84\\xe2\\xf2\\xff\\xff\\xea\\x9f*\\x03J\\xb0*\\x03J\\xfb\\x92\\x03J\\xc5*\\x03J\\xd3*\\x03J\\xdc*\\x03J\\xe0*\\x03J\\x96'"
+        },
+        {
+          "start": 26836,
+          "end_exclusive": 26837,
+          "old_hex": "94",
+          "new_hex": "96",
+          "old_context": "b'\\xf9\\x92\\x03J\\xc5*\\x03J\\xd3*\\x03J\\xdc*\\x03J\\xe0*\\x03J\\x94p\\x03J\\xec*\\x03J\\xf4*\\x03J\\x08+\\x03J\\x19+\\x03J\\x99'",
+          "new_context": "b'\\xfb\\x92\\x03J\\xc5*\\x03J\\xd3*\\x03J\\xdc*\\x03J\\xe0*\\x03J\\x96p\\x03J\\xec*\\x03J\\xf4*\\x03J\\x08+\\x03J\\x19+\\x03J\\x9b'"
+        },
+        {
+          "start": 26856,
+          "end_exclusive": 26857,
+          "old_hex": "99",
+          "new_hex": "9b",
+          "old_context": "b'\\x94p\\x03J\\xec*\\x03J\\xf4*\\x03J\\x08+\\x03J\\x19+\\x03J\\x99V\\x03J\\xf0A-\\xe9\\x02`\\xa0\\xe1\\x00 \\xa0\\xe3\\x01P\\xa0\\xe1\\x00'",
+          "new_context": "b'\\x96p\\x03J\\xec*\\x03J\\xf4*\\x03J\\x08+\\x03J\\x19+\\x03J\\x9bV\\x03J\\xf0A-\\xe9\\x02`\\xa0\\xe1\\x00 \\xa0\\xe3\\x01P\\xa0\\xe1\\x00'"
+        },
+        {
+          "start": 27756,
+          "end_exclusive": 27757,
+          "old_hex": "e4",
+          "new_hex": "e6",
+          "old_context": "b'\\xa4+\\x03J\\xba+\\x03J.\\x00\\x00 \\xd0+\\x03J\\xfe+\\x03J\\xe4Q\\x03J\\xf5+\\x03J\\xe3+\\x03J\\xf0A-\\xe9\\x18\\xd0M\\xe2\\x00'",
+          "new_context": "b'\\xa4+\\x03J\\xba+\\x03J.\\x00\\x00 \\xd0+\\x03J\\xfe+\\x03J\\xe6Q\\x03J\\xf5+\\x03J\\xe3+\\x03J\\xf0A-\\xe9\\x18\\xd0M\\xe2\\x00'"
+        },
+        {
+          "start": 28776,
+          "end_exclusive": 28777,
+          "old_hex": "e4",
+          "new_hex": "e6",
+          "old_context": "b'\\x0b-\\x03J\\x11,\\x03J\\x19+\\x03J\\x0c!\\x03J%,\\x03J\\xe4Q\\x03JN,\\x03J`,\\x03JL!\\x03Jp,\\x03J\\x90'",
+          "new_context": "b'\\x0b-\\x03J\\x11,\\x03J\\x19+\\x03J\\x0c!\\x03J%,\\x03J\\xe6Q\\x03JN,\\x03J`,\\x03JL!\\x03Jp,\\x03J\\x90'"
+        },
+        {
+          "start": 29432,
+          "end_exclusive": 29433,
+          "old_hex": "f9",
+          "new_hex": "fb",
+          "old_context": "b'\\xb4\\xff\\xff\\xeaK-\\x03J&+\\x03J\\xc2-\\x03J\\xf9-\\x03J\\xf9\\x92\\x03J\\xdf-\\x03J\\xec-\\x03J\\xf6-\\x03J\\x85-\\x03J\\xa0'",
+          "new_context": "b'\\xb4\\xff\\xff\\xeaK-\\x03J&+\\x03J\\xc2-\\x03J\\xf9-\\x03J\\xfb\\x92\\x03J\\xdf-\\x03J\\xec-\\x03J\\xf6-\\x03J\\x85-\\x03J\\xa0'"
+        },
+        {
+          "start": 29816,
+          "end_exclusive": 29817,
+          "old_hex": "94",
+          "new_hex": "96",
+          "old_context": "b'\\xe0\\xff\\xff\\xea\\x0c!\\x03J%,\\x03Jc.\\x03J\\x94.\\x03J\\x94p\\x03J\\x13@-\\xe9\\x02@\\xa0\\xe1\\x07 \\x8d\\xe2\\xe7\\xfb\\xff\\xeb\\x00'",
+          "new_context": "b'\\xe0\\xff\\xff\\xea\\x0c!\\x03J%,\\x03Jc.\\x03J\\x94.\\x03J\\x96p\\x03J\\x13@-\\xe9\\x02@\\xa0\\xe1\\x07 \\x8d\\xe2\\xe7\\xfb\\xff\\xeb\\x00'"
+        },
+        {
+          "start": 33780,
+          "end_exclusive": 33781,
+          "old_hex": "95",
+          "new_hex": "97",
+          "old_context": "b'\\x01\\x00R\\xe3\\x10@-\\xe9\\x04\\x00\\x93\\xc5\\x00\\x00\\x9f\\xd5\\x83\\x91\\x00\\xeb\\x95p\\x03J\\x04\\xe0-\\xe5\\xcc\\xd0M\\xe2\\xc8 \\xa0\\xe3\\r\\x10\\xa0\\xe1\\x00'",
+          "new_context": "b'\\x01\\x00R\\xe3\\x10@-\\xe9\\x04\\x00\\x93\\xc5\\x00\\x00\\x9f\\xd5\\x83\\x91\\x00\\xeb\\x97p\\x03J\\x04\\xe0-\\xe5\\xcc\\xd0M\\xe2\\xc8 \\xa0\\xe3\\r\\x10\\xa0\\xe1\\x00'"
+        },
+        {
+          "start": 33844,
+          "end_exclusive": 33845,
+          "old_hex": "d6",
+          "new_hex": "d8",
+          "old_context": "b'<%\\x00\\xeb\\x00\\x00\\xa0\\xe3\\xcc\\xd0\\x8d\\xe2\\x04\\xf0\\x9d\\xe4\\x855\\x03J\\xd65\\x03J0@-\\xe9\\x03@\\xa0\\xe1\\x000\\xa0\\xe3\\x14\\xd0M\\xe2\\x01'",
+          "new_context": "b'<%\\x00\\xeb\\x00\\x00\\xa0\\xe3\\xcc\\xd0\\x8d\\xe2\\x04\\xf0\\x9d\\xe4\\x855\\x03J\\xd85\\x03J0@-\\xe9\\x03@\\xa0\\xe1\\x000\\xa0\\xe3\\x14\\xd0M\\xe2\\x01'"
+        },
+        {
+          "start": 33992,
+          "end_exclusive": 33993,
+          "old_hex": "1d",
+          "new_hex": "1f",
+          "old_context": "b'\\x07\\x00\\x9d\\xe91/\\x00\\xeb\\x14\\xd0\\x8d\\xe20\\x80\\xbd\\xe8\\xc0\\xab\\x03J\\x1d6\\x03J\\x010\\xa0\\xe1\\x08 \\xa0\\xe3\\x00\\x10\\xa0\\xe1\\x00\\x00\\x9f\\xe5\\xd7'",
+          "new_context": "b'\\x07\\x00\\x9d\\xe91/\\x00\\xeb\\x14\\xd0\\x8d\\xe20\\x80\\xbd\\xe8\\xc0\\xab\\x03J\\x1f6\\x03J\\x010\\xa0\\xe1\\x08 \\xa0\\xe3\\x00\\x10\\xa0\\xe1\\x00\\x00\\x9f\\xe5\\xd7'"
+        },
+        {
+          "start": 34016,
+          "end_exclusive": 34017,
+          "old_hex": "52",
+          "new_hex": "54",
+          "old_context": "b'\\x010\\xa0\\xe1\\x08 \\xa0\\xe3\\x00\\x10\\xa0\\xe1\\x00\\x00\\x9f\\xe5\\xd7\\x94\\x00\\xeaR6\\x03J\\x07@-\\xe9\\x00\\x10\\xa0\\xe1\\xf0 \\xcd\\xe1\\x0c\\x00\\x9f\\xe5\\x08'",
+          "new_context": "b'\\x010\\xa0\\xe1\\x08 \\xa0\\xe3\\x00\\x10\\xa0\\xe1\\x00\\x00\\x9f\\xe5\\xd7\\x94\\x00\\xeaT6\\x03J\\x07@-\\xe9\\x00\\x10\\xa0\\xe1\\xf0 \\xcd\\xe1\\x0c\\x00\\x9f\\xe5\\x08'"
+        },
+        {
+          "start": 34052,
+          "end_exclusive": 34053,
+          "old_hex": "62",
+          "new_hex": "64",
+          "old_context": "b'\\x0c\\x00\\x9f\\xe5\\x08 \\xa0\\xe3\\xd0\\x94\\x00\\xeb\\x0c\\xd0\\x8d\\xe2\\x04\\xf0\\x9d\\xe4b6\\x03J\\x10@-\\xe9\\x00@\\x99\\xe5,\\x01\\x9f\\xe50\\x10\\x94\\xe5 '",
+          "new_context": "b'\\x0c\\x00\\x9f\\xe5\\x08 \\xa0\\xe3\\xd0\\x94\\x00\\xeb\\x0c\\xd0\\x8d\\xe2\\x04\\xf0\\x9d\\xe4d6\\x03J\\x10@-\\xe9\\x00@\\x99\\xe5,\\x01\\x9f\\xe50\\x10\\x94\\xe5 '"
+        },
+        {
+          "start": 34372,
+          "end_exclusive": 34373,
+          "old_hex": "73",
+          "new_hex": "75",
+          "old_context": "b'\\xa5\\xff\\xff\\xeb\\xae\\xe2\\xff\\xeb\\x00\\x00\\xa0\\xe3 \\xd0\\x8d\\xe2\\x10\\x80\\xbd\\xe8s6\\x03J\\x7f6\\x03J\\x896\\x03J\\x926\\x03J\\x9a6\\x03J\\xa5'",
+          "new_context": "b'\\xa5\\xff\\xff\\xeb\\xae\\xe2\\xff\\xeb\\x00\\x00\\xa0\\xe3 \\xd0\\x8d\\xe2\\x10\\x80\\xbd\\xe8u6\\x03J\\x816\\x03J\\x8b6\\x03J\\x946\\x03J\\x9c6\\x03J\\xa7'"
+        },
+        {
+          "start": 34376,
+          "end_exclusive": 34377,
+          "old_hex": "7f",
+          "new_hex": "81",
+          "old_context": "b'\\xae\\xe2\\xff\\xeb\\x00\\x00\\xa0\\xe3 \\xd0\\x8d\\xe2\\x10\\x80\\xbd\\xe8s6\\x03J\\x7f6\\x03J\\x896\\x03J\\x926\\x03J\\x9a6\\x03J\\xa56\\x03J\\xaf'",
+          "new_context": "b'\\xae\\xe2\\xff\\xeb\\x00\\x00\\xa0\\xe3 \\xd0\\x8d\\xe2\\x10\\x80\\xbd\\xe8u6\\x03J\\x816\\x03J\\x8b6\\x03J\\x946\\x03J\\x9c6\\x03J\\xa76\\x03J\\xb1'"
+        },
+        {
+          "start": 34380,
+          "end_exclusive": 34381,
+          "old_hex": "89",
+          "new_hex": "8b",
+          "old_context": "b'\\x00\\x00\\xa0\\xe3 \\xd0\\x8d\\xe2\\x10\\x80\\xbd\\xe8s6\\x03J\\x7f6\\x03J\\x896\\x03J\\x926\\x03J\\x9a6\\x03J\\xa56\\x03J\\xaf6\\x03J\\xbb'",
+          "new_context": "b'\\x00\\x00\\xa0\\xe3 \\xd0\\x8d\\xe2\\x10\\x80\\xbd\\xe8u6\\x03J\\x816\\x03J\\x8b6\\x03J\\x946\\x03J\\x9c6\\x03J\\xa76\\x03J\\xb16\\x03J\\xbd'"
+        },
+        {
+          "start": 34384,
+          "end_exclusive": 34385,
+          "old_hex": "92",
+          "new_hex": "94",
+          "old_context": "b' \\xd0\\x8d\\xe2\\x10\\x80\\xbd\\xe8s6\\x03J\\x7f6\\x03J\\x896\\x03J\\x926\\x03J\\x9a6\\x03J\\xa56\\x03J\\xaf6\\x03J\\xbb6\\x03J\\xd1'",
+          "new_context": "b' \\xd0\\x8d\\xe2\\x10\\x80\\xbd\\xe8u6\\x03J\\x816\\x03J\\x8b6\\x03J\\x946\\x03J\\x9c6\\x03J\\xa76\\x03J\\xb16\\x03J\\xbd6\\x03J\\xd3'"
+        },
+        {
+          "start": 34388,
+          "end_exclusive": 34389,
+          "old_hex": "9a",
+          "new_hex": "9c",
+          "old_context": "b'\\x10\\x80\\xbd\\xe8s6\\x03J\\x7f6\\x03J\\x896\\x03J\\x926\\x03J\\x9a6\\x03J\\xa56\\x03J\\xaf6\\x03J\\xbb6\\x03J\\xd16\\x03J\\xdb'",
+          "new_context": "b'\\x10\\x80\\xbd\\xe8u6\\x03J\\x816\\x03J\\x8b6\\x03J\\x946\\x03J\\x9c6\\x03J\\xa76\\x03J\\xb16\\x03J\\xbd6\\x03J\\xd36\\x03J\\xdd'"
+        },
+        {
+          "start": 34392,
+          "end_exclusive": 34393,
+          "old_hex": "a5",
+          "new_hex": "a7",
+          "old_context": "b's6\\x03J\\x7f6\\x03J\\x896\\x03J\\x926\\x03J\\x9a6\\x03J\\xa56\\x03J\\xaf6\\x03J\\xbb6\\x03J\\xd16\\x03J\\xdb6\\x03J\\xe5'",
+          "new_context": "b'u6\\x03J\\x816\\x03J\\x8b6\\x03J\\x946\\x03J\\x9c6\\x03J\\xa76\\x03J\\xb16\\x03J\\xbd6\\x03J\\xd36\\x03J\\xdd6\\x03J\\xe7'"
+        },
+        {
+          "start": 34396,
+          "end_exclusive": 34397,
+          "old_hex": "af",
+          "new_hex": "b1",
+          "old_context": "b'\\x7f6\\x03J\\x896\\x03J\\x926\\x03J\\x9a6\\x03J\\xa56\\x03J\\xaf6\\x03J\\xbb6\\x03J\\xd16\\x03J\\xdb6\\x03J\\xe56\\x03J\\xeb'",
+          "new_context": "b'\\x816\\x03J\\x8b6\\x03J\\x946\\x03J\\x9c6\\x03J\\xa76\\x03J\\xb16\\x03J\\xbd6\\x03J\\xd36\\x03J\\xdd6\\x03J\\xe76\\x03J\\xed'"
+        },
+        {
+          "start": 34400,
+          "end_exclusive": 34401,
+          "old_hex": "bb",
+          "new_hex": "bd",
+          "old_context": "b'\\x896\\x03J\\x926\\x03J\\x9a6\\x03J\\xa56\\x03J\\xaf6\\x03J\\xbb6\\x03J\\xd16\\x03J\\xdb6\\x03J\\xe56\\x03J\\xeb6\\x03J\\xfa'",
+          "new_context": "b'\\x8b6\\x03J\\x946\\x03J\\x9c6\\x03J\\xa76\\x03J\\xb16\\x03J\\xbd6\\x03J\\xd36\\x03J\\xdd6\\x03J\\xe76\\x03J\\xed6\\x03J\\xfc'"
+        },
+        {
+          "start": 34404,
+          "end_exclusive": 34405,
+          "old_hex": "d1",
+          "new_hex": "d3",
+          "old_context": "b'\\x926\\x03J\\x9a6\\x03J\\xa56\\x03J\\xaf6\\x03J\\xbb6\\x03J\\xd16\\x03J\\xdb6\\x03J\\xe56\\x03J\\xeb6\\x03J\\xfa6\\x03J\\x03'",
+          "new_context": "b'\\x946\\x03J\\x9c6\\x03J\\xa76\\x03J\\xb16\\x03J\\xbd6\\x03J\\xd36\\x03J\\xdd6\\x03J\\xe76\\x03J\\xed6\\x03J\\xfc6\\x03J\\x05'"
+        },
+        {
+          "start": 34408,
+          "end_exclusive": 34409,
+          "old_hex": "db",
+          "new_hex": "dd",
+          "old_context": "b'\\x9a6\\x03J\\xa56\\x03J\\xaf6\\x03J\\xbb6\\x03J\\xd16\\x03J\\xdb6\\x03J\\xe56\\x03J\\xeb6\\x03J\\xfa6\\x03J\\x037\\x03J\\x15'",
+          "new_context": "b'\\x9c6\\x03J\\xa76\\x03J\\xb16\\x03J\\xbd6\\x03J\\xd36\\x03J\\xdd6\\x03J\\xe76\\x03J\\xed6\\x03J\\xfc6\\x03J\\x057\\x03J\\x17'"
+        },
+        {
+          "start": 34412,
+          "end_exclusive": 34413,
+          "old_hex": "e5",
+          "new_hex": "e7",
+          "old_context": "b'\\xa56\\x03J\\xaf6\\x03J\\xbb6\\x03J\\xd16\\x03J\\xdb6\\x03J\\xe56\\x03J\\xeb6\\x03J\\xfa6\\x03J\\x037\\x03J\\x157\\x03J!'",
+          "new_context": "b'\\xa76\\x03J\\xb16\\x03J\\xbd6\\x03J\\xd36\\x03J\\xdd6\\x03J\\xe76\\x03J\\xed6\\x03J\\xfc6\\x03J\\x057\\x03J\\x177\\x03J#'"
+        },
+        {
+          "start": 34416,
+          "end_exclusive": 34417,
+          "old_hex": "eb",
+          "new_hex": "ed",
+          "old_context": "b'\\xaf6\\x03J\\xbb6\\x03J\\xd16\\x03J\\xdb6\\x03J\\xe56\\x03J\\xeb6\\x03J\\xfa6\\x03J\\x037\\x03J\\x157\\x03J!7\\x03J('",
+          "new_context": "b'\\xb16\\x03J\\xbd6\\x03J\\xd36\\x03J\\xdd6\\x03J\\xe76\\x03J\\xed6\\x03J\\xfc6\\x03J\\x057\\x03J\\x177\\x03J#7\\x03J*'"
+        },
+        {
+          "start": 34420,
+          "end_exclusive": 34421,
+          "old_hex": "fa",
+          "new_hex": "fc",
+          "old_context": "b'\\xbb6\\x03J\\xd16\\x03J\\xdb6\\x03J\\xe56\\x03J\\xeb6\\x03J\\xfa6\\x03J\\x037\\x03J\\x157\\x03J!7\\x03J(7\\x03J,'",
+          "new_context": "b'\\xbd6\\x03J\\xd36\\x03J\\xdd6\\x03J\\xe76\\x03J\\xed6\\x03J\\xfc6\\x03J\\x057\\x03J\\x177\\x03J#7\\x03J*7\\x03J.'"
+        },
+        {
+          "start": 34424,
+          "end_exclusive": 34425,
+          "old_hex": "03",
+          "new_hex": "05",
+          "old_context": "b'\\xd16\\x03J\\xdb6\\x03J\\xe56\\x03J\\xeb6\\x03J\\xfa6\\x03J\\x037\\x03J\\x157\\x03J!7\\x03J(7\\x03J,W\\x03J/'",
+          "new_context": "b'\\xd36\\x03J\\xdd6\\x03J\\xe76\\x03J\\xed6\\x03J\\xfc6\\x03J\\x057\\x03J\\x177\\x03J#7\\x03J*7\\x03J.W\\x03J1'"
+        }
+      ]
+    },
+    "u-boot-with-spl.bin": {
+      "old_sha256": "268703509efb34b61fd15b6fbf40a0b6f75269009ac80b7df31d50d637583693",
+      "new_sha256": "dbbbbd1a253db23769538604587fa736f4134ca1d5e1fc7478eb20f467a08242",
+      "old_bytes": 394752,
+      "new_bytes": 394752,
+      "byte_identical": false,
+      "changed_bytes_shared_length": 29594,
+      "change_ranges": [
+        {
+          "start": 122884,
+          "end_exclusive": 122888,
+          "old_hex": "6458e3c8",
+          "new_hex": "e8076368",
+          "old_context": "b\"\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'\\x05\\x19VdX\\xe3\\xc8j\\xd4\\x0e\\x94\\x00\\x04%\\xc0J\\x00\\x00\\x00J\\x00\\x00\\x00i\\xe9\\x11\\xe5\"",
+          "new_context": "b\"\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'\\x05\\x19V\\xe8\\x07chj\\xd4\\x0e\\x94\\x00\\x04%\\xc0J\\x00\\x00\\x00J\\x00\\x00\\x00\\x02\\x89\\x91\\xad\""
+        },
+        {
+          "start": 122904,
+          "end_exclusive": 122908,
+          "old_hex": "69e911e5",
+          "new_hex": "028991ad",
+          "old_context": "b'dX\\xe3\\xc8j\\xd4\\x0e\\x94\\x00\\x04%\\xc0J\\x00\\x00\\x00J\\x00\\x00\\x00i\\xe9\\x11\\xe5\\x11\\x02\\x05\\x00U-Boot 2026.07-O'",
+          "new_context": "b'\\xe8\\x07chj\\xd4\\x0e\\x94\\x00\\x04%\\xc0J\\x00\\x00\\x00J\\x00\\x00\\x00\\x02\\x89\\x91\\xad\\x11\\x02\\x05\\x00U-Boot 2026.07-O'"
+        },
+        {
+          "start": 125112,
+          "end_exclusive": 125113,
+          "old_hex": "eb",
+          "new_hex": "ed",
+          "old_context": "b'\\x04\\x00\\xa0\\xe1\\x10@\\xbd\\xe8\\xef\\xff\\xff\\xea\\x08\\x00\\x9f\\xe5R\\xb0\\x00\\xeb\\xeb;\\x03J\\xcd\\x08\\x03J\\xe2\\x08\\x03J\\x01\\x00\\xa0\\xe3\\x1e\\xff/\\xe1p'",
+          "new_context": "b'\\x04\\x00\\xa0\\xe1\\x10@\\xbd\\xe8\\xef\\xff\\xff\\xea\\x08\\x00\\x9f\\xe5R\\xb0\\x00\\xeb\\xed;\\x03J\\xcd\\x08\\x03J\\xe2\\x08\\x03J\\x01\\x00\\xa0\\xe3\\x1e\\xff/\\xe1p'"
+        },
+        {
+          "start": 127820,
+          "end_exclusive": 127821,
+          "old_hex": "e1",
+          "new_hex": "e3",
+          "old_context": "b'E\\n\\x03Ji\\n\\x03J\\x99\\n\\x03J\\xc9\\n\\x03J\\xfe\\x0c\\x03J\\xe16\\x03J\\x95p\\x03J\\xd9\\n\\x03J\\xf8\\n\\x03J\\xeb\\t\\x03J\\xf3'",
+          "new_context": "b'E\\n\\x03Ji\\n\\x03J\\x99\\n\\x03J\\xc9\\n\\x03J\\xfe\\x0c\\x03J\\xe36\\x03J\\x97p\\x03J\\xd9\\n\\x03J\\xf8\\n\\x03J\\xeb\\t\\x03J\\xf3'"
+        },
+        {
+          "start": 127824,
+          "end_exclusive": 127825,
+          "old_hex": "95",
+          "new_hex": "97",
+          "old_context": "b'i\\n\\x03J\\x99\\n\\x03J\\xc9\\n\\x03J\\xfe\\x0c\\x03J\\xe16\\x03J\\x95p\\x03J\\xd9\\n\\x03J\\xf8\\n\\x03J\\xeb\\t\\x03J\\xf3\\t\\x03J\\x94'",
+          "new_context": "b'i\\n\\x03J\\x99\\n\\x03J\\xc9\\n\\x03J\\xfe\\x0c\\x03J\\xe36\\x03J\\x97p\\x03J\\xd9\\n\\x03J\\xf8\\n\\x03J\\xeb\\t\\x03J\\xf3\\t\\x03J\\x96'"
+        },
+        {
+          "start": 127844,
+          "end_exclusive": 127845,
+          "old_hex": "94",
+          "new_hex": "96",
+          "old_context": "b'\\x95p\\x03J\\xd9\\n\\x03J\\xf8\\n\\x03J\\xeb\\t\\x03J\\xf3\\t\\x03J\\x94p\\x03J\\x10@-\\xe9\\x00@\\xa0\\xe1\\x18\\x00\\x9f\\xe51\\xb1\\x00\\xeb<'",
+          "new_context": "b'\\x97p\\x03J\\xd9\\n\\x03J\\xf8\\n\\x03J\\xeb\\t\\x03J\\xf3\\t\\x03J\\x96p\\x03J\\x10@-\\xe9\\x00@\\xa0\\xe1\\x18\\x00\\x9f\\xe51\\xb1\\x00\\xeb<'"
+        },
+        {
+          "start": 129296,
+          "end_exclusive": 129297,
+          "old_hex": "85",
+          "new_hex": "87",
+          "old_context": "b\"'}\\x00\\xebl\\xff\\xff\\xea\\x97\\x0c\\x03J\\x9d\\x0c\\x03J\\xcc\\x0c\\x03J\\x85C\\x03J\\xd6\\x0c\\x03J\\xd2\\x0c\\x03J\\xdb\\x0c\\x03J\\x95\\xc1\\xba^\\xe6\"",
+          "new_context": "b\"'}\\x00\\xebl\\xff\\xff\\xea\\x97\\x0c\\x03J\\x9d\\x0c\\x03J\\xcc\\x0c\\x03J\\x87C\\x03J\\xd6\\x0c\\x03J\\xd2\\x0c\\x03J\\xdb\\x0c\\x03J\\x95\\xc1\\xba^\\xe6\""
+        },
+        {
+          "start": 129348,
+          "end_exclusive": 129349,
+          "old_hex": "11",
+          "new_hex": "13",
+          "old_context": "b'\\x95\\xc1\\xba`\\xfa\\x0c\\x03J\\x95\\xc1\\xbaa\\x01\\r\\x03J\\t\\r\\x03J\\x11\\x8d\\x03J\\r\\r\\x03J\\x12\\r\\x03J\\xb2\\x0c\\x03J\\xcar\\x03J\\xbe'",
+          "new_context": "b'\\x95\\xc1\\xba`\\xfa\\x0c\\x03J\\x95\\xc1\\xbaa\\x01\\r\\x03J\\t\\r\\x03J\\x13\\x8d\\x03J\\r\\r\\x03J\\x12\\r\\x03J\\xb2\\x0c\\x03J\\xccr\\x03J\\xbe'"
+        },
+        {
+          "start": 129364,
+          "end_exclusive": 129365,
+          "old_hex": "ca",
+          "new_hex": "cc",
+          "old_context": "b'\\t\\r\\x03J\\x11\\x8d\\x03J\\r\\r\\x03J\\x12\\r\\x03J\\xb2\\x0c\\x03J\\xcar\\x03J\\xbe\\x0c\\x03Jp@-\\xe9\\x0fP\\xa0\\xe3\\x02`\\xa0\\xe3\\\\'",
+          "new_context": "b'\\t\\r\\x03J\\x13\\x8d\\x03J\\r\\r\\x03J\\x12\\r\\x03J\\xb2\\x0c\\x03J\\xccr\\x03J\\xbe\\x0c\\x03Jp@-\\xe9\\x0fP\\xa0\\xe3\\x02`\\xa0\\xe3\\\\'"
+        },
+        {
+          "start": 133784,
+          "end_exclusive": 133785,
+          "old_hex": "11",
+          "new_hex": "13",
+          "old_context": "b'\\xcc\\x0c\\x03J\\xd6\\x0c\\x03J\\xd2\\x0c\\x03J\\xdb\\x0c\\x03J\\t\\r\\x03J\\x11\\x8d\\x03J\\x95\\xc1\\xba`\\xfa\\x0c\\x03J\\r\\r\\x03J\\x12\\r\\x03J\\x97'",
+          "new_context": "b'\\xcc\\x0c\\x03J\\xd6\\x0c\\x03J\\xd2\\x0c\\x03J\\xdb\\x0c\\x03J\\t\\r\\x03J\\x13\\x8d\\x03J\\x95\\xc1\\xba`\\xfa\\x0c\\x03J\\r\\r\\x03J\\x12\\r\\x03J\\x97'"
+        },
+        {
+          "start": 133812,
+          "end_exclusive": 133813,
+          "old_hex": "ca",
+          "new_hex": "cc",
+          "old_context": "b'\\xfa\\x0c\\x03J\\r\\r\\x03J\\x12\\r\\x03J\\x97\\x0c\\x03J\\xb2\\x0c\\x03J\\xcar\\x03J\\xcc\\x0e\\x03J\\xbe\\x0c\\x03J\\xd0\\x0e\\x03J\\x02\\xc0\\xa0\\xe1\\x03'",
+          "new_context": "b'\\xfa\\x0c\\x03J\\r\\r\\x03J\\x12\\r\\x03J\\x97\\x0c\\x03J\\xb2\\x0c\\x03J\\xccr\\x03J\\xcc\\x0e\\x03J\\xbe\\x0c\\x03J\\xd0\\x0e\\x03J\\x02\\xc0\\xa0\\xe1\\x03'"
+        },
+        {
+          "start": 136640,
+          "end_exclusive": 136641,
+          "old_hex": "95",
+          "new_hex": "97",
+          "old_context": "b'\\xa3\\xa8\\x00\\xebd\\xfd\\xff\\xeb\\x10@\\xbd\\xe8/Q\\x00\\xea&\\x13\\x03J\\x95p\\x03J>\\x13\\x03J\\x01\\x0bP\\xe3\\x10\\x00\\x00\\x1a\\x10@-\\xe9\\x10'",
+          "new_context": "b'\\xa3\\xa8\\x00\\xebd\\xfd\\xff\\xeb\\x10@\\xbd\\xe8/Q\\x00\\xea&\\x13\\x03J\\x97p\\x03J>\\x13\\x03J\\x01\\x0bP\\xe3\\x10\\x00\\x00\\x1a\\x10@-\\xe9\\x10'"
+        },
+        {
+          "start": 137304,
+          "end_exclusive": 137305,
+          "old_hex": "eb",
+          "new_hex": "ed",
+          "old_context": "b'\\x04\\x00\\xa0\\xe1\\xa0\\xf4\\xff\\xeb$\\x00\\x9f\\xe508\\x00\\xeb\\xf1\\xff\\xff\\xea\\xeb;\\x03J\\xfa\\x13\\x03J\\xe3\\x13\\x03J \\x14\\x03J\\x1f\\x14\\x03J\\x11'",
+          "new_context": "b'\\x04\\x00\\xa0\\xe1\\xa0\\xf4\\xff\\xeb$\\x00\\x9f\\xe508\\x00\\xeb\\xf1\\xff\\xff\\xea\\xed;\\x03J\\xfa\\x13\\x03J\\xe3\\x13\\x03J \\x14\\x03J\\x1f\\x14\\x03J\\x11'"
+        },
+        {
+          "start": 137736,
+          "end_exclusive": 137737,
+          "old_hex": "eb",
+          "new_hex": "ed",
+          "old_context": "b'\\x1e\\xff/\\xe1\\x95\\x14\\x03J]\\x13\\x03J\\x9c\\x14\\x03J\\xa5\\x14\\x03J\\xeb;\\x03J\\x1e\\xff/\\xe1\\x1e\\xff/\\xe1p@-\\xe9\\x00@\\xa0\\xe1\\x01'",
+          "new_context": "b'\\x1e\\xff/\\xe1\\x95\\x14\\x03J]\\x13\\x03J\\x9c\\x14\\x03J\\xa5\\x14\\x03J\\xed;\\x03J\\x1e\\xff/\\xe1\\x1e\\xff/\\xe1p@-\\xe9\\x00@\\xa0\\xe1\\x01'"
+        },
+        {
+          "start": 138500,
+          "end_exclusive": 138501,
+          "old_hex": "4d",
+          "new_hex": "4f",
+          "old_context": "b'\\x000\\x87\\xe5\\xf0\\x8d\\xbd\\xe8\\x11\\x15\\x03J\\r\\x15\\x03J\\x19\\x15\\x03JMC\\x03J6\\x15\\x03J\"\\x15\\x03J\\x00 \\xa0\\xe1\\x04\\x10\\x9f\\xe5\\x04'",
+          "new_context": "b'\\x000\\x87\\xe5\\xf0\\x8d\\xbd\\xe8\\x11\\x15\\x03J\\r\\x15\\x03J\\x19\\x15\\x03JOC\\x03J6\\x15\\x03J\"\\x15\\x03J\\x00 \\xa0\\xe1\\x04\\x10\\x9f\\xe5\\x04'"
+        },
+        {
+          "start": 141280,
+          "end_exclusive": 141281,
+          "old_hex": "94",
+          "new_hex": "96",
+          "old_context": "b'\\x10@\\xbd\\xe8\\x00\\x10\\xa0\\xe3\\x04 \\x9f\\xe5\\x98\\x9a\\x00\\xea\\x82 \\x03J\\x94p\\x03J\\xf3A-\\xe9\\x00@\\xa0\\xe1@\\x02\\x9f\\xe5\\x02`\\xa0\\xe1\\x03'",
+          "new_context": "b'\\x10@\\xbd\\xe8\\x00\\x10\\xa0\\xe3\\x04 \\x9f\\xe5\\x98\\x9a\\x00\\xea\\x82 \\x03J\\x96p\\x03J\\xf3A-\\xe9\\x00@\\xa0\\xe1@\\x02\\x9f\\xe5\\x02`\\xa0\\xe1\\x03'"
+        },
+        {
+          "start": 141924,
+          "end_exclusive": 141925,
+          "old_hex": "52",
+          "new_hex": "54",
+          "old_context": "b'\\xce \\x03J\\xdc \\x03J\\xf2 \\x03J\\x0c!\\x03J1!\\x03JR=\\x03J\\x14!\\x03JT!\\x03JL!\\x03Jr!\\x03J\\x85'",
+          "new_context": "b'\\xce \\x03J\\xdc \\x03J\\xf2 \\x03J\\x0c!\\x03J1!\\x03JT=\\x03J\\x14!\\x03JT!\\x03JL!\\x03Jr!\\x03J\\x85'"
+        },
+        {
+          "start": 144072,
+          "end_exclusive": 144073,
+          "old_hex": "eb",
+          "new_hex": "ed",
+          "old_context": "b'\\x8f\"\\x03J\\xbe\"\\x03J\\xcf\"\\x03J\\x00\\x00\\x9f\\xe5eY\\x00\\xea\\xeb;\\x03J\\xf7@-\\xe9\\x00P\\xa0\\xe1\\x97m\\x00\\xeb\\x00@P\\xe2\\x04'",
+          "new_context": "b'\\x8f\"\\x03J\\xbe\"\\x03J\\xcf\"\\x03J\\x00\\x00\\x9f\\xe5eY\\x00\\xea\\xed;\\x03J\\xf7@-\\xe9\\x00P\\xa0\\xe1\\x97m\\x00\\xeb\\x00@P\\xe2\\x04'"
+        },
+        {
+          "start": 144352,
+          "end_exclusive": 144353,
+          "old_hex": "eb",
+          "new_hex": "ed",
+          "old_context": "b'\\x00\\x10\\xa0\\xe1\\x18\\x00\\x9f\\xe5\\xc4\\xff\\xff\\xea\\xfc\"\\x03J \\x14\\x03J\\xeb;\\x03J\\x0c#\\x03J1#\\x03JS#\\x03Jb#\\x03J7'",
+          "new_context": "b'\\x00\\x10\\xa0\\xe1\\x18\\x00\\x9f\\xe5\\xc4\\xff\\xff\\xea\\xfc\"\\x03J \\x14\\x03J\\xed;\\x03J\\x0c#\\x03J1#\\x03JS#\\x03Jb#\\x03J7'"
+        },
+        {
+          "start": 144844,
+          "end_exclusive": 144845,
+          "old_hex": "f5",
+          "new_hex": "f7",
+          "old_context": "b'\\x00@\\xa0\\xe3\\xac\\xff\\xff\\xea\\xfa\\x06\\x03J\\xb6#\\x03J\\x16\"\\x03J\\xf58\\x03J\\xb2\\x0c\\x03J\\x0c$\\x03J\\xcc\\x0e\\x03J\\x07@-\\xe9\\xf0'",
+          "new_context": "b'\\x00@\\xa0\\xe3\\xac\\xff\\xff\\xea\\xfa\\x06\\x03J\\xb6#\\x03J\\x16\"\\x03J\\xf78\\x03J\\xb2\\x0c\\x03J\\x0c$\\x03J\\xcc\\x0e\\x03J\\x07@-\\xe9\\xf0'"
+        },
+        {
+          "start": 145712,
+          "end_exclusive": 145713,
+          "old_hex": "94",
+          "new_hex": "96",
+          "old_context": "b'p\\x80\\xbd\\xe8h$\\x03J\\x93$\\x03J\\xb1$\\x03J\\xc9$\\x03J\\x94p\\x03J\\x10@-\\xe9\\x00@\\xa0\\xe1\\x14\\x00\\x9f\\xe5\\xf4/\\x00\\xeb\\x04'",
+          "new_context": "b'p\\x80\\xbd\\xe8h$\\x03J\\x93$\\x03J\\xb1$\\x03J\\xc9$\\x03J\\x96p\\x03J\\x10@-\\xe9\\x00@\\xa0\\xe1\\x14\\x00\\x9f\\xe5\\xf4/\\x00\\xeb\\x04'"
+        },
+        {
+          "start": 146200,
+          "end_exclusive": 146201,
+          "old_hex": "8f",
+          "new_hex": "91",
+          "old_context": "b'\\x04\\x10\\xa0\\xe1\\x05\\x00\\xa0\\xe1\\xa3l\\x00\\xeb\\x00@\\xa0\\xe1\\xc8\\xff\\xff\\xea\\x8f|\\x03J\\xcc\\x0e\\x03JY%\\x03J\\x000\\x91\\xe5\\x00\\x00S\\xe3z'",
+          "new_context": "b'\\x04\\x10\\xa0\\xe1\\x05\\x00\\xa0\\xe1\\xa3l\\x00\\xeb\\x00@\\xa0\\xe1\\xc8\\xff\\xff\\xea\\x91|\\x03J\\xcc\\x0e\\x03JY%\\x03J\\x000\\x91\\xe5\\x00\\x00S\\xe3z'"
+        },
+        {
+          "start": 148648,
+          "end_exclusive": 148649,
+          "old_hex": "19",
+          "new_hex": "1b",
+          "old_context": "b'p0\\xef\\xe6\\x00\\x00\\xa0\\xe3\\x000\\xc4\\xe5\\x08\\xd0\\x8d\\xe2\\x10\\x80\\xbd\\xe8\\x19s\\x03J\\x13@-\\xe9\\x02@\\xa0\\xe1\\x040\\x8d\\xe2( \\x9f\\xe5\\x1c'",
+          "new_context": "b'p0\\xef\\xe6\\x00\\x00\\xa0\\xe3\\x000\\xc4\\xe5\\x08\\xd0\\x8d\\xe2\\x10\\x80\\xbd\\xe8\\x1bs\\x03J\\x13@-\\xe9\\x02@\\xa0\\xe1\\x040\\x8d\\xe2( \\x9f\\xe5\\x1c'"
+        },
+        {
+          "start": 148848,
+          "end_exclusive": 148849,
+          "old_hex": "5d",
+          "new_hex": "5f",
+          "old_context": "b'\\x10\\x80\\xbd\\xe8\\xb4\\x16\\x03J\\x020\\xa0\\xe1\\x00 \\x9f\\xe5G\\xff\\xff\\xea]=\\x03J\\x020\\xa0\\xe1\\x00 \\x9f\\xe5C\\xff\\xff\\xeak*\\x03J7'",
+          "new_context": "b'\\x10\\x80\\xbd\\xe8\\xb4\\x16\\x03J\\x020\\xa0\\xe1\\x00 \\x9f\\xe5G\\xff\\xff\\xea_=\\x03J\\x020\\xa0\\xe1\\x00 \\x9f\\xe5C\\xff\\xff\\xeak*\\x03J7'"
+        },
+        {
+          "start": 149696,
+          "end_exclusive": 149697,
+          "old_hex": "f9",
+          "new_hex": "fb",
+          "old_context": "b'\\xe3\\x9b\\x00\\xeb\\x01@\\x84\\xe2\\xf2\\xff\\xff\\xea\\x9f*\\x03J\\xb0*\\x03J\\xf9\\x92\\x03J\\xc5*\\x03J\\xd3*\\x03J\\xdc*\\x03J\\xe0*\\x03J\\x94'",
+          "new_context": "b'\\xe3\\x9b\\x00\\xeb\\x01@\\x84\\xe2\\xf2\\xff\\xff\\xea\\x9f*\\x03J\\xb0*\\x03J\\xfb\\x92\\x03J\\xc5*\\x03J\\xd3*\\x03J\\xdc*\\x03J\\xe0*\\x03J\\x96'"
+        },
+        {
+          "start": 149716,
+          "end_exclusive": 149717,
+          "old_hex": "94",
+          "new_hex": "96",
+          "old_context": "b'\\xf9\\x92\\x03J\\xc5*\\x03J\\xd3*\\x03J\\xdc*\\x03J\\xe0*\\x03J\\x94p\\x03J\\xec*\\x03J\\xf4*\\x03J\\x08+\\x03J\\x19+\\x03J\\x99'",
+          "new_context": "b'\\xfb\\x92\\x03J\\xc5*\\x03J\\xd3*\\x03J\\xdc*\\x03J\\xe0*\\x03J\\x96p\\x03J\\xec*\\x03J\\xf4*\\x03J\\x08+\\x03J\\x19+\\x03J\\x9b'"
+        },
+        {
+          "start": 149736,
+          "end_exclusive": 149737,
+          "old_hex": "99",
+          "new_hex": "9b",
+          "old_context": "b'\\x94p\\x03J\\xec*\\x03J\\xf4*\\x03J\\x08+\\x03J\\x19+\\x03J\\x99V\\x03J\\xf0A-\\xe9\\x02`\\xa0\\xe1\\x00 \\xa0\\xe3\\x01P\\xa0\\xe1\\x00'",
+          "new_context": "b'\\x96p\\x03J\\xec*\\x03J\\xf4*\\x03J\\x08+\\x03J\\x19+\\x03J\\x9bV\\x03J\\xf0A-\\xe9\\x02`\\xa0\\xe1\\x00 \\xa0\\xe3\\x01P\\xa0\\xe1\\x00'"
+        },
+        {
+          "start": 150636,
+          "end_exclusive": 150637,
+          "old_hex": "e4",
+          "new_hex": "e6",
+          "old_context": "b'\\xa4+\\x03J\\xba+\\x03J.\\x00\\x00 \\xd0+\\x03J\\xfe+\\x03J\\xe4Q\\x03J\\xf5+\\x03J\\xe3+\\x03J\\xf0A-\\xe9\\x18\\xd0M\\xe2\\x00'",
+          "new_context": "b'\\xa4+\\x03J\\xba+\\x03J.\\x00\\x00 \\xd0+\\x03J\\xfe+\\x03J\\xe6Q\\x03J\\xf5+\\x03J\\xe3+\\x03J\\xf0A-\\xe9\\x18\\xd0M\\xe2\\x00'"
+        },
+        {
+          "start": 151656,
+          "end_exclusive": 151657,
+          "old_hex": "e4",
+          "new_hex": "e6",
+          "old_context": "b'\\x0b-\\x03J\\x11,\\x03J\\x19+\\x03J\\x0c!\\x03J%,\\x03J\\xe4Q\\x03JN,\\x03J`,\\x03JL!\\x03Jp,\\x03J\\x90'",
+          "new_context": "b'\\x0b-\\x03J\\x11,\\x03J\\x19+\\x03J\\x0c!\\x03J%,\\x03J\\xe6Q\\x03JN,\\x03J`,\\x03JL!\\x03Jp,\\x03J\\x90'"
+        },
+        {
+          "start": 152312,
+          "end_exclusive": 152313,
+          "old_hex": "f9",
+          "new_hex": "fb",
+          "old_context": "b'\\xb4\\xff\\xff\\xeaK-\\x03J&+\\x03J\\xc2-\\x03J\\xf9-\\x03J\\xf9\\x92\\x03J\\xdf-\\x03J\\xec-\\x03J\\xf6-\\x03J\\x85-\\x03J\\xa0'",
+          "new_context": "b'\\xb4\\xff\\xff\\xeaK-\\x03J&+\\x03J\\xc2-\\x03J\\xf9-\\x03J\\xfb\\x92\\x03J\\xdf-\\x03J\\xec-\\x03J\\xf6-\\x03J\\x85-\\x03J\\xa0'"
+        },
+        {
+          "start": 152696,
+          "end_exclusive": 152697,
+          "old_hex": "94",
+          "new_hex": "96",
+          "old_context": "b'\\xe0\\xff\\xff\\xea\\x0c!\\x03J%,\\x03Jc.\\x03J\\x94.\\x03J\\x94p\\x03J\\x13@-\\xe9\\x02@\\xa0\\xe1\\x07 \\x8d\\xe2\\xe7\\xfb\\xff\\xeb\\x00'",
+          "new_context": "b'\\xe0\\xff\\xff\\xea\\x0c!\\x03J%,\\x03Jc.\\x03J\\x94.\\x03J\\x96p\\x03J\\x13@-\\xe9\\x02@\\xa0\\xe1\\x07 \\x8d\\xe2\\xe7\\xfb\\xff\\xeb\\x00'"
+        },
+        {
+          "start": 156660,
+          "end_exclusive": 156661,
+          "old_hex": "95",
+          "new_hex": "97",
+          "old_context": "b'\\x01\\x00R\\xe3\\x10@-\\xe9\\x04\\x00\\x93\\xc5\\x00\\x00\\x9f\\xd5\\x83\\x91\\x00\\xeb\\x95p\\x03J\\x04\\xe0-\\xe5\\xcc\\xd0M\\xe2\\xc8 \\xa0\\xe3\\r\\x10\\xa0\\xe1\\x00'",
+          "new_context": "b'\\x01\\x00R\\xe3\\x10@-\\xe9\\x04\\x00\\x93\\xc5\\x00\\x00\\x9f\\xd5\\x83\\x91\\x00\\xeb\\x97p\\x03J\\x04\\xe0-\\xe5\\xcc\\xd0M\\xe2\\xc8 \\xa0\\xe3\\r\\x10\\xa0\\xe1\\x00'"
+        },
+        {
+          "start": 156724,
+          "end_exclusive": 156725,
+          "old_hex": "d6",
+          "new_hex": "d8",
+          "old_context": "b'<%\\x00\\xeb\\x00\\x00\\xa0\\xe3\\xcc\\xd0\\x8d\\xe2\\x04\\xf0\\x9d\\xe4\\x855\\x03J\\xd65\\x03J0@-\\xe9\\x03@\\xa0\\xe1\\x000\\xa0\\xe3\\x14\\xd0M\\xe2\\x01'",
+          "new_context": "b'<%\\x00\\xeb\\x00\\x00\\xa0\\xe3\\xcc\\xd0\\x8d\\xe2\\x04\\xf0\\x9d\\xe4\\x855\\x03J\\xd85\\x03J0@-\\xe9\\x03@\\xa0\\xe1\\x000\\xa0\\xe3\\x14\\xd0M\\xe2\\x01'"
+        },
+        {
+          "start": 156872,
+          "end_exclusive": 156873,
+          "old_hex": "1d",
+          "new_hex": "1f",
+          "old_context": "b'\\x07\\x00\\x9d\\xe91/\\x00\\xeb\\x14\\xd0\\x8d\\xe20\\x80\\xbd\\xe8\\xc0\\xab\\x03J\\x1d6\\x03J\\x010\\xa0\\xe1\\x08 \\xa0\\xe3\\x00\\x10\\xa0\\xe1\\x00\\x00\\x9f\\xe5\\xd7'",
+          "new_context": "b'\\x07\\x00\\x9d\\xe91/\\x00\\xeb\\x14\\xd0\\x8d\\xe20\\x80\\xbd\\xe8\\xc0\\xab\\x03J\\x1f6\\x03J\\x010\\xa0\\xe1\\x08 \\xa0\\xe3\\x00\\x10\\xa0\\xe1\\x00\\x00\\x9f\\xe5\\xd7'"
+        },
+        {
+          "start": 156896,
+          "end_exclusive": 156897,
+          "old_hex": "52",
+          "new_hex": "54",
+          "old_context": "b'\\x010\\xa0\\xe1\\x08 \\xa0\\xe3\\x00\\x10\\xa0\\xe1\\x00\\x00\\x9f\\xe5\\xd7\\x94\\x00\\xeaR6\\x03J\\x07@-\\xe9\\x00\\x10\\xa0\\xe1\\xf0 \\xcd\\xe1\\x0c\\x00\\x9f\\xe5\\x08'",
+          "new_context": "b'\\x010\\xa0\\xe1\\x08 \\xa0\\xe3\\x00\\x10\\xa0\\xe1\\x00\\x00\\x9f\\xe5\\xd7\\x94\\x00\\xeaT6\\x03J\\x07@-\\xe9\\x00\\x10\\xa0\\xe1\\xf0 \\xcd\\xe1\\x0c\\x00\\x9f\\xe5\\x08'"
+        },
+        {
+          "start": 156932,
+          "end_exclusive": 156933,
+          "old_hex": "62",
+          "new_hex": "64",
+          "old_context": "b'\\x0c\\x00\\x9f\\xe5\\x08 \\xa0\\xe3\\xd0\\x94\\x00\\xeb\\x0c\\xd0\\x8d\\xe2\\x04\\xf0\\x9d\\xe4b6\\x03J\\x10@-\\xe9\\x00@\\x99\\xe5,\\x01\\x9f\\xe50\\x10\\x94\\xe5 '",
+          "new_context": "b'\\x0c\\x00\\x9f\\xe5\\x08 \\xa0\\xe3\\xd0\\x94\\x00\\xeb\\x0c\\xd0\\x8d\\xe2\\x04\\xf0\\x9d\\xe4d6\\x03J\\x10@-\\xe9\\x00@\\x99\\xe5,\\x01\\x9f\\xe50\\x10\\x94\\xe5 '"
+        },
+        {
+          "start": 157252,
+          "end_exclusive": 157253,
+          "old_hex": "73",
+          "new_hex": "75",
+          "old_context": "b'\\xa5\\xff\\xff\\xeb\\xae\\xe2\\xff\\xeb\\x00\\x00\\xa0\\xe3 \\xd0\\x8d\\xe2\\x10\\x80\\xbd\\xe8s6\\x03J\\x7f6\\x03J\\x896\\x03J\\x926\\x03J\\x9a6\\x03J\\xa5'",
+          "new_context": "b'\\xa5\\xff\\xff\\xeb\\xae\\xe2\\xff\\xeb\\x00\\x00\\xa0\\xe3 \\xd0\\x8d\\xe2\\x10\\x80\\xbd\\xe8u6\\x03J\\x816\\x03J\\x8b6\\x03J\\x946\\x03J\\x9c6\\x03J\\xa7'"
+        },
+        {
+          "start": 157256,
+          "end_exclusive": 157257,
+          "old_hex": "7f",
+          "new_hex": "81",
+          "old_context": "b'\\xae\\xe2\\xff\\xeb\\x00\\x00\\xa0\\xe3 \\xd0\\x8d\\xe2\\x10\\x80\\xbd\\xe8s6\\x03J\\x7f6\\x03J\\x896\\x03J\\x926\\x03J\\x9a6\\x03J\\xa56\\x03J\\xaf'",
+          "new_context": "b'\\xae\\xe2\\xff\\xeb\\x00\\x00\\xa0\\xe3 \\xd0\\x8d\\xe2\\x10\\x80\\xbd\\xe8u6\\x03J\\x816\\x03J\\x8b6\\x03J\\x946\\x03J\\x9c6\\x03J\\xa76\\x03J\\xb1'"
+        },
+        {
+          "start": 157260,
+          "end_exclusive": 157261,
+          "old_hex": "89",
+          "new_hex": "8b",
+          "old_context": "b'\\x00\\x00\\xa0\\xe3 \\xd0\\x8d\\xe2\\x10\\x80\\xbd\\xe8s6\\x03J\\x7f6\\x03J\\x896\\x03J\\x926\\x03J\\x9a6\\x03J\\xa56\\x03J\\xaf6\\x03J\\xbb'",
+          "new_context": "b'\\x00\\x00\\xa0\\xe3 \\xd0\\x8d\\xe2\\x10\\x80\\xbd\\xe8u6\\x03J\\x816\\x03J\\x8b6\\x03J\\x946\\x03J\\x9c6\\x03J\\xa76\\x03J\\xb16\\x03J\\xbd'"
+        },
+        {
+          "start": 157264,
+          "end_exclusive": 157265,
+          "old_hex": "92",
+          "new_hex": "94",
+          "old_context": "b' \\xd0\\x8d\\xe2\\x10\\x80\\xbd\\xe8s6\\x03J\\x7f6\\x03J\\x896\\x03J\\x926\\x03J\\x9a6\\x03J\\xa56\\x03J\\xaf6\\x03J\\xbb6\\x03J\\xd1'",
+          "new_context": "b' \\xd0\\x8d\\xe2\\x10\\x80\\xbd\\xe8u6\\x03J\\x816\\x03J\\x8b6\\x03J\\x946\\x03J\\x9c6\\x03J\\xa76\\x03J\\xb16\\x03J\\xbd6\\x03J\\xd3'"
+        },
+        {
+          "start": 157268,
+          "end_exclusive": 157269,
+          "old_hex": "9a",
+          "new_hex": "9c",
+          "old_context": "b'\\x10\\x80\\xbd\\xe8s6\\x03J\\x7f6\\x03J\\x896\\x03J\\x926\\x03J\\x9a6\\x03J\\xa56\\x03J\\xaf6\\x03J\\xbb6\\x03J\\xd16\\x03J\\xdb'",
+          "new_context": "b'\\x10\\x80\\xbd\\xe8u6\\x03J\\x816\\x03J\\x8b6\\x03J\\x946\\x03J\\x9c6\\x03J\\xa76\\x03J\\xb16\\x03J\\xbd6\\x03J\\xd36\\x03J\\xdd'"
+        },
+        {
+          "start": 157272,
+          "end_exclusive": 157273,
+          "old_hex": "a5",
+          "new_hex": "a7",
+          "old_context": "b's6\\x03J\\x7f6\\x03J\\x896\\x03J\\x926\\x03J\\x9a6\\x03J\\xa56\\x03J\\xaf6\\x03J\\xbb6\\x03J\\xd16\\x03J\\xdb6\\x03J\\xe5'",
+          "new_context": "b'u6\\x03J\\x816\\x03J\\x8b6\\x03J\\x946\\x03J\\x9c6\\x03J\\xa76\\x03J\\xb16\\x03J\\xbd6\\x03J\\xd36\\x03J\\xdd6\\x03J\\xe7'"
+        },
+        {
+          "start": 157276,
+          "end_exclusive": 157277,
+          "old_hex": "af",
+          "new_hex": "b1",
+          "old_context": "b'\\x7f6\\x03J\\x896\\x03J\\x926\\x03J\\x9a6\\x03J\\xa56\\x03J\\xaf6\\x03J\\xbb6\\x03J\\xd16\\x03J\\xdb6\\x03J\\xe56\\x03J\\xeb'",
+          "new_context": "b'\\x816\\x03J\\x8b6\\x03J\\x946\\x03J\\x9c6\\x03J\\xa76\\x03J\\xb16\\x03J\\xbd6\\x03J\\xd36\\x03J\\xdd6\\x03J\\xe76\\x03J\\xed'"
+        },
+        {
+          "start": 157280,
+          "end_exclusive": 157281,
+          "old_hex": "bb",
+          "new_hex": "bd",
+          "old_context": "b'\\x896\\x03J\\x926\\x03J\\x9a6\\x03J\\xa56\\x03J\\xaf6\\x03J\\xbb6\\x03J\\xd16\\x03J\\xdb6\\x03J\\xe56\\x03J\\xeb6\\x03J\\xfa'",
+          "new_context": "b'\\x8b6\\x03J\\x946\\x03J\\x9c6\\x03J\\xa76\\x03J\\xb16\\x03J\\xbd6\\x03J\\xd36\\x03J\\xdd6\\x03J\\xe76\\x03J\\xed6\\x03J\\xfc'"
+        },
+        {
+          "start": 157284,
+          "end_exclusive": 157285,
+          "old_hex": "d1",
+          "new_hex": "d3",
+          "old_context": "b'\\x926\\x03J\\x9a6\\x03J\\xa56\\x03J\\xaf6\\x03J\\xbb6\\x03J\\xd16\\x03J\\xdb6\\x03J\\xe56\\x03J\\xeb6\\x03J\\xfa6\\x03J\\x03'",
+          "new_context": "b'\\x946\\x03J\\x9c6\\x03J\\xa76\\x03J\\xb16\\x03J\\xbd6\\x03J\\xd36\\x03J\\xdd6\\x03J\\xe76\\x03J\\xed6\\x03J\\xfc6\\x03J\\x05'"
+        },
+        {
+          "start": 157288,
+          "end_exclusive": 157289,
+          "old_hex": "db",
+          "new_hex": "dd",
+          "old_context": "b'\\x9a6\\x03J\\xa56\\x03J\\xaf6\\x03J\\xbb6\\x03J\\xd16\\x03J\\xdb6\\x03J\\xe56\\x03J\\xeb6\\x03J\\xfa6\\x03J\\x037\\x03J\\x15'",
+          "new_context": "b'\\x9c6\\x03J\\xa76\\x03J\\xb16\\x03J\\xbd6\\x03J\\xd36\\x03J\\xdd6\\x03J\\xe76\\x03J\\xed6\\x03J\\xfc6\\x03J\\x057\\x03J\\x17'"
+        },
+        {
+          "start": 157292,
+          "end_exclusive": 157293,
+          "old_hex": "e5",
+          "new_hex": "e7",
+          "old_context": "b'\\xa56\\x03J\\xaf6\\x03J\\xbb6\\x03J\\xd16\\x03J\\xdb6\\x03J\\xe56\\x03J\\xeb6\\x03J\\xfa6\\x03J\\x037\\x03J\\x157\\x03J!'",
+          "new_context": "b'\\xa76\\x03J\\xb16\\x03J\\xbd6\\x03J\\xd36\\x03J\\xdd6\\x03J\\xe76\\x03J\\xed6\\x03J\\xfc6\\x03J\\x057\\x03J\\x177\\x03J#'"
+        },
+        {
+          "start": 157296,
+          "end_exclusive": 157297,
+          "old_hex": "eb",
+          "new_hex": "ed",
+          "old_context": "b'\\xaf6\\x03J\\xbb6\\x03J\\xd16\\x03J\\xdb6\\x03J\\xe56\\x03J\\xeb6\\x03J\\xfa6\\x03J\\x037\\x03J\\x157\\x03J!7\\x03J('",
+          "new_context": "b'\\xb16\\x03J\\xbd6\\x03J\\xd36\\x03J\\xdd6\\x03J\\xe76\\x03J\\xed6\\x03J\\xfc6\\x03J\\x057\\x03J\\x177\\x03J#7\\x03J*'"
+        },
+        {
+          "start": 157300,
+          "end_exclusive": 157301,
+          "old_hex": "fa",
+          "new_hex": "fc",
+          "old_context": "b'\\xbb6\\x03J\\xd16\\x03J\\xdb6\\x03J\\xe56\\x03J\\xeb6\\x03J\\xfa6\\x03J\\x037\\x03J\\x157\\x03J!7\\x03J(7\\x03J,'",
+          "new_context": "b'\\xbd6\\x03J\\xd36\\x03J\\xdd6\\x03J\\xe76\\x03J\\xed6\\x03J\\xfc6\\x03J\\x057\\x03J\\x177\\x03J#7\\x03J*7\\x03J.'"
+        },
+        {
+          "start": 157304,
+          "end_exclusive": 157305,
+          "old_hex": "03",
+          "new_hex": "05",
+          "old_context": "b'\\xd16\\x03J\\xdb6\\x03J\\xe56\\x03J\\xeb6\\x03J\\xfa6\\x03J\\x037\\x03J\\x157\\x03J!7\\x03J(7\\x03J,W\\x03J/'",
+          "new_context": "b'\\xd36\\x03J\\xdd6\\x03J\\xe76\\x03J\\xed6\\x03J\\xfc6\\x03J\\x057\\x03J\\x177\\x03J#7\\x03J*7\\x03J.W\\x03J1'"
+        }
+      ]
+    }
+  },
+  "boot_build_metadata": {
+    "upstream": "U-Boot 2026.07",
+    "source_ddr": true,
+    "vendor_ddr_or_monitor": false,
+    "profile": "dshanpi_t153_source_1g_smp",
+    "physical_ddr_mib": 1024,
+    "usable_dram_mib": 384,
+    "linux_cpus": 4,
+    "psci": "0.1 CPU_ON only",
+    "disk_spl_offset": 8192,
+    "disk_uboot_offset": 131072,
+    "file_uboot_offset": 122880,
+    "secure_sram_sections": {
+      ".secure_text": {
+        "start": 327680,
+        "bytes": 1688
+      },
+      ".secure_data": {
+        "start": 329368,
+        "bytes": 64
+      },
+      ".secure_stack": {
+        "start": 333464,
+        "bytes": 6504
+      }
+    },
+    "image": "u-boot-t153-with-spl.bin",
+    "bytes": 394752,
+    "sha256": "dbbbbd1a253db23769538604587fa736f4134ca1d5e1fc7478eb20f467a08242",
+    "spl_sha256": "3a0924528fa82d67a87ac4d229be14393e35f90855972b66f7ee4b51a512d73e",
+    "uboot_img_sha256": "cd966c7b213c494feb8f087bc0d1161e9d1401f81aa9e83dfae3be2217e44f0a",
+    "config_sha256": "6e0217e81384522503a1cbe9e9e7e26288bec97f8ad9f5e5154703c1139f7c51"
+  },
+  "object_comparison": {
+    "same": 0,
+    "different_count": 194,
+    "different": [
+      "fs/fs_internal.o",
+      "fs/fs.o",
+      "lib/fdtdec.o",
+      "lib/sha1.o",
+      "lib/membuf.o",
+      "lib/strto.o",
+      "lib/elf.o",
+      "lib/time.o",
+      "lib/hexdump.o",
+      "lib/crc16.o",
+      "lib/fdtdec_common.o",
+      "lib/crc32.o",
+      "lib/linux_string.o",
+      "lib/string.o",
+      "lib/ldiv.o",
+      "lib/crc16-ccitt.o",
+      "lib/rtc-lib.o",
+      "lib/qsort.o",
+      "lib/alist.o",
+      "lib/linux_compat.o",
+      "lib/ctype.o",
+      "lib/uuid.o",
+      "lib/display_options.o",
+      "lib/hashtable.o",
+      "lib/div64.o",
+      "lib/hash-checksum.o",
+      "lib/md5.o",
+      "lib/list_sort.o",
+      "lib/crc8.o",
+      "lib/vsprintf.o",
+      "lib/errno.o",
+      "lib/gunzip.o",
+      "lib/net_utils.o",
+      "lib/hang.o",
+      "lib/lmb.o",
+      "lib/sha256.o",
+      "lib/rc4.o",
+      "lib/tables_csum.o",
+      "lib/panic.o",
+      "lib/date.o",
+      "lib/sha256_common.o",
+      "lib/abuf.o",
+      "env/flags.o",
+      "env/env.o",
+      "env/common.o",
+      "env/callback.o",
+      "env/attr.o",
+      "env/nowhere.o",
+      "boot/bootm_os.o",
+      "boot/image-fit.o",
+      "boot/image-fdt.o",
+      "boot/image.o",
+      "boot/fdt_support.o",
+      "boot/image-board.o",
+      "boot/bootm.o",
+      "common/dlmalloc.o",
+      "common/main.o",
+      "common/xyzModem.o",
+      "common/cli_simple.o",
+      "common/s_record.o",
+      "common/stdio.o",
+      "common/board_r.o",
+      "common/board_info.o",
+      "common/autoboot.o",
+      "common/cli_hush.o",
+      "common/command.o",
+      "common/console.o",
+      "common/version.o",
+      "common/memtop.o",
+      "common/malloc_simple.o",
+      "common/board_f.o",
+      "common/memsize.o",
+      "common/cli_readline.o",
+      "common/exports.o",
+      "common/cli.o",
+      "common/cli_getch.o",
+      "common/hash.o",
+      "common/splash.o",
+      "cmd/boot.o",
+      "cmd/source.o",
+      "cmd/fat.o",
+      "cmd/cache.o",
+      "cmd/elf.o",
+      "cmd/time.o",
+      "cmd/fdt.o",
+      "cmd/part.o",
+      "cmd/mem.o",
+      "cmd/ximg.o",
+      "cmd/echo.o",
+      "cmd/console.o",
+      "cmd/sleep.o",
+      "cmd/version.o",
+      "cmd/help.o",
+      "cmd/load.o",
+      "cmd/blkcache.o",
+      "cmd/test.o",
+      "cmd/ext4.o",
+      "cmd/blk_common.o",
+      "cmd/mmc.o",
+      "cmd/setexpr.o",
+      "cmd/bdinfo.o",
+      "cmd/panic.o",
+      "cmd/hash.o",
+      "cmd/nvedit.o",
+      "cmd/fs.o",
+      "cmd/exit.o",
+      "cmd/itest.o",
+      "cmd/bootm.o",
+      "cmd/bootz.o",
+      "disk/part_dos.o",
+      "disk/part.o",
+      "disk/disk-uclass.o",
+      "fs/ext4/ext4_common.o",
+      "fs/ext4/dev.o",
+      "fs/ext4/ext4fs.o",
+      "fs/fat/fat.o",
+      "lib/zlib/zlib.o",
+      "lib/libfdt/fdt_ro.o",
+      "lib/libfdt/fdt_empty_tree.o",
+      "lib/libfdt/fdt_wip.o",
+      "lib/libfdt/fdt_strerror.o",
+      "lib/libfdt/fdt.o",
+      "lib/libfdt/fdt_sw.o",
+      "lib/libfdt/fdt_addresses.o",
+      "lib/libfdt/fdt_rw.o",
+      "drivers/core/util.o",
+      "drivers/core/simple-bus.o",
+      "drivers/core/fdtaddr.o",
+      "drivers/core/of_extra.o",
+      "drivers/core/uclass.o",
+      "drivers/core/ofnode.o",
+      "drivers/core/dump.o",
+      "drivers/core/root.o",
+      "drivers/core/lists.o",
+      "drivers/core/ofnode_graph.o",
+      "drivers/core/tag.o",
+      "drivers/core/read_extra.o",
+      "drivers/core/device-remove.o",
+      "drivers/core/device.o",
+      "drivers/mmc/mmc-uclass.o",
+      "drivers/mmc/mmc.o",
+      "drivers/input/key_matrix.o",
+      "drivers/block/blk-uclass.o",
+      "drivers/block/blkcache.o",
+      "drivers/serial/ns16550.o",
+      "drivers/serial/serial-uclass.o",
+      "drivers/crypto/fsl/sec.o",
+      "board/dshanpi/t153/reset.o",
+      "board/dshanpi/t153/psci-entry-t153.o",
+      "board/dshanpi/t153/board.o",
+      "board/dshanpi/t153/mmc.o",
+      "board/dshanpi/t153/psci-t153.o",
+      "board/dshanpi/t153/smp-dt.o",
+      "common/init/board_init.o",
+      "arch/arm/lib/vectors.o",
+      "arch/arm/lib/cache.o",
+      "arch/arm/lib/zimage.o",
+      "arch/arm/lib/muldi3.o",
+      "arch/arm/lib/reset.o",
+      "arch/arm/lib/psci-dt.o",
+      "arch/arm/lib/interrupts.o",
+      "arch/arm/lib/div0.o",
+      "arch/arm/lib/setjmp.o",
+      "arch/arm/lib/crt0.o",
+      "arch/arm/lib/div64.o",
+      "arch/arm/lib/relocate.o",
+      "arch/arm/lib/ashldi3.o",
+      "arch/arm/lib/ashrdi3.o",
+      "arch/arm/lib/eabi_compat.o",
+      "arch/arm/lib/cache-cp15.o",
+      "arch/arm/lib/uldivmod.o",
+      "arch/arm/lib/stack.o",
+      "arch/arm/lib/sections.o",
+      "arch/arm/lib/lib1funcs.o",
+      "arch/arm/lib/memcpy.o",
+      "arch/arm/lib/bdinfo.o",
+      "arch/arm/lib/memset.o",
+      "arch/arm/lib/bootm-fdt.o",
+      "arch/arm/lib/lshrdi3.o",
+      "arch/arm/lib/bootm.o",
+      "arch/arm/cpu/armv7/arch_timer.o",
+      "arch/arm/cpu/armv7/psci.o",
+      "arch/arm/cpu/armv7/syslib.o",
+      "arch/arm/cpu/armv7/cache_v7_asm.o",
+      "arch/arm/cpu/armv7/cp15.o",
+      "arch/arm/cpu/armv7/virt-dt.o",
+      "arch/arm/cpu/armv7/nonsec_virt.o",
+      "arch/arm/cpu/armv7/cache_v7.o",
+      "arch/arm/cpu/armv7/cpu.o",
+      "arch/arm/cpu/armv7/virt-v7.o",
+      "arch/arm/cpu/armv7/psci-common.o",
+      "arch/arm/cpu/armv7/exception_level.o",
+      "arch/arm/cpu/armv7/lowlevel_init.o",
+      "arch/arm/cpu/armv7/start.o"
+    ]
+  },
+  "unique_printable_strings": {
+    "old_only": [
+      "Jgfff@s",
+      "arm-openwrt-linux-muslgnueabi-gcc (OpenWrt GCC 14.3.0 r33311-981c978eff) 14.3.0"
+    ],
+    "new_only": [
+      "JgfffBs",
+      "arm-openwrt-linux-muslgnueabi-gcc (OpenWrt GCC 14.3.0 r38135-0c4cd0f9920a) 14.3.0"
+    ]
+  },
+  "allocated_object_sections": {
+    "identical_object_count": 193,
+    "different_objects": [
+      {
+        "object": "cmd/version.o",
+        "sections": [
+          ".rodata.do_version.str1.1",
+          ".text.do_version"
+        ]
+      }
+    ],
+    "note": "Raw object debug sections contain build-directory paths and are not byte identical; compare SHF_ALLOC content/size/type by section name."
+  },
+  "conclusion": {
+    "spl_byte_identical": true,
+    "full_bootarea_byte_identical": false,
+    "remaining_difference": "Compiler version text in cmd/version.o includes current ImmortalWrt GCC build revision. All other 193 proper U-Boot objects have identical allocated sections. Longer compiler banner shifts merged string data and referenced pointers; legacy image CRC consequently differs.",
+    "hardware_validation": false
+  }
+}

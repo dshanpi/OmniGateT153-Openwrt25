@@ -1,12 +1,23 @@
-# OmniGate T153 · ImmortalWrt 25.12
+# OmniGate T153 · ImmortalWrt 25.12.2 preview.2
 
 为 T153MX OmniGate 提供 **ImmortalWrt 25.12.2、Argon 中文界面、4G 管理、多 WAN 和常用网络插件**。板级支持沿用本项目的源码 DDR4 初始化、SPL/U-Boot、四核启动、设备树及完整 eMMC 镜像构建流程。
 
-> **软件验证预览版，2026-11-16。** 已完成完整编译和镜像结构、67 个必选包、HTTPS 后端及 AIC 模块/固件检查。**本版未烧录、未做硬件验收**；旧 OpenWrt 镜像的实测结果不能替代本版验收。
+> **preview.2 软件验证预览版，2026-11-16。** 本次重新构建启动区并打包完整镜像，新增未压缩 `.img` 直接下载。 已完成完整编译和镜像结构、67 个必选包、HTTPS 后端及 AIC 模块/固件检查。**本版未烧录、未做硬件验收**；旧 OpenWrt 镜像的实测结果不能替代本版验收。
 
-[下载镜像、独立 FES 与校验文件](https://github.com/dshanpi/OmniGateT153-Openwrt25/releases/tag/v25.12.2-t153-immortalwrt-preview.1)
+[下载镜像、独立 FES 与校验文件](https://github.com/dshanpi/OmniGateT153-Openwrt25/releases/tag/v25.12.2-t153-immortalwrt-preview.2)
 
 项目：[dshanpi/OmniGateT153-Openwrt25](https://github.com/dshanpi/OmniGateT153-Openwrt25) · 上游：[ImmortalWrt](https://github.com/immortalwrt/immortalwrt/tree/v25.12.2)
+
+
+## preview.2 更新
+
+- 固定 **U-Boot 包自身**的 `LOCALVERSION=-OpenWrt-r33311-981c978eff` 与 `SOURCE_DATE_EPOCH=1792282260`，重新从源码构建持久 SPL/U-Boot；ImmortalWrt 系统的版本、时间戳和 feeds 不改动。
+- 新 SPL 为 49,152 字节，与保留的 OpenWrt 25.12.6 实测引导基线逐字节一致。U-Boot proper **不是逐字节相同**：193 个对象的可分配节一致，剩余 `cmd/version.o` 含当前 ImmortalWrt 工具链版本字符串，导致链接后的字符串、地址及 CRC 变化。详细差异见随附 `bootarea-compatibility.json`。
+- 完整 raw 镜像检查及原样 Openix SPL 提取/校验函数检查通过；提供未压缩 `.img`，避免手动解压步骤。
+
+此前实际烧录工具中的“校验主线 SPL 失败”根因尚未确定。**重新构建和软件检查通过，不代表实际烧录或启动问题已被证明修复。** 本版仍需独立烧录、启动和长期稳定性验收。
+
+[直接查看新版烧录步骤](IMMORTALWRT-PREVIEW2.md)
 
 ## 版本与适用硬件
 
@@ -85,10 +96,10 @@ sudo apt-get install build-essential clang flex bison gawk gcc-multilib \
 
 ### 2. 下载源码并打补丁
 
-先从 [本版发布页](https://github.com/dshanpi/OmniGateT153-Openwrt25/releases/tag/v25.12.2-t153-immortalwrt-preview.1) 下载 `immortalwrt-25.12.2-t153.patch` 与 `SHA256SUMS`，核对摘要并放入工作目录。补丁 SHA256 为：
+先从 [本版发布页](https://github.com/dshanpi/OmniGateT153-Openwrt25/releases/tag/v25.12.2-t153-immortalwrt-preview.2) 下载 `immortalwrt-25.12.2-t153-preview2.patch` 与 `SHA256SUMS`，核对摘要并放入工作目录。补丁 SHA256 为：
 
 ```text
-d6f0b0a19dbf9b6c8569d223d6aacb63cf2c19cbfc357898f0caa30dc3ad9756
+ea3aa43db99dcc2c6f947441a74b0711f5a6609220da43af1dd3f05344b60817
 ```
 
 ```sh
@@ -102,10 +113,10 @@ printf '%s  %s\n' \
 sha256sum -c SHA256SUMS --ignore-missing
 tar -xzf immortalwrt-25.12.2.tar.gz
 cd immortalwrt-25.12.2
-patch -p1 < ../immortalwrt-25.12.2-t153.patch
+patch -p1 < ../immortalwrt-25.12.2-t153-preview2.patch
 ```
 
-补丁应完整应用且无 `.rej`。不要对 ImmortalWrt 直接套用旧 `openwrt-25.12.6-t153.patch` 或旧版 `apply-native.sh`；后者可能写入旧系统版本与时间戳。
+补丁应完整应用且无 `.rej`。preview.2 补丁包含完整板级改动，应直接应用到官方干净源码，不能先打 preview.1 再叠加。不要对 ImmortalWrt 直接套用旧 `openwrt-25.12.6-t153.patch` 或旧版 `apply-native.sh`；后者可能写入旧系统版本与时间戳。
 
 ### 3. 正常 feeds 与 menuconfig
 
@@ -204,7 +215,7 @@ flowchart TB
 
 | 文件 | 用途 |
 |---|---|
-| 解压后的本次 `ext4-raw.img` | 写入 eMMC 的完整盘，包含分区表、持久引导、内核和根文件系统 |
+| 本次 `ext4-raw.img`（直接下载或解压获得） | 写入 eMMC 的完整盘，包含分区表、持久引导、内核和根文件系统 |
 | `t153-fes-ddr933-ram-loader.img` | 仅在 RAM 中运行的临时烧录引导 |
 
 固定 loader 为 **1,154,048 字节**，SHA256：
@@ -213,23 +224,32 @@ flowchart TB
 0d32d52139bc969f7f90665d32203ff07366ed0a31139bda607d89edbcd12873
 ```
 
-[本版发布页](https://github.com/dshanpi/OmniGateT153-Openwrt25/releases/tag/v25.12.2-t153-immortalwrt-preview.1) 已附带同一个已核对的 loader，必须校验上述摘要。使用本版 ImmortalWrt raw，不能把旧 OpenWrt raw 当作本版镜像。
+[本版发布页](https://github.com/dshanpi/OmniGateT153-Openwrt25/releases/tag/v25.12.2-t153-immortalwrt-preview.2) 已附带同一个已核对的 loader，必须校验上述摘要。使用本版 ImmortalWrt raw，不能把旧 OpenWrt raw 当作本版镜像。
 
 ### 本版下载与校验
 
 | 附件 | 用途 |
 |---|---|
-| [完整镜像](https://github.com/dshanpi/OmniGateT153-Openwrt25/releases/download/v25.12.2-t153-immortalwrt-preview.1/immortalwrt-sunxi-cortexa7-dshanpi_t153mx-omnigate-ext4-raw.img.gz) | 解压后用于 FES 写入 eMMC |
-| [独立 FES](https://github.com/dshanpi/OmniGateT153-Openwrt25/releases/download/v25.12.2-t153-immortalwrt-preview.1/t153-fes-ddr933-ram-loader.img) | 保持原文件，临时在 RAM 中运行 |
-| [SHA256SUMS](https://github.com/dshanpi/OmniGateT153-Openwrt25/releases/download/v25.12.2-t153-immortalwrt-preview.1/SHA256SUMS) · [raw 摘要](https://github.com/dshanpi/OmniGateT153-Openwrt25/releases/download/v25.12.2-t153-immortalwrt-preview.1/RAW-SHA256.txt) | 分别核对下载附件及解压后的完整盘 |
-| [板级补丁](https://github.com/dshanpi/OmniGateT153-Openwrt25/releases/download/v25.12.2-t153-immortalwrt-preview.1/immortalwrt-25.12.2-t153.patch) · [最小配置](https://github.com/dshanpi/OmniGateT153-Openwrt25/releases/download/v25.12.2-t153-immortalwrt-preview.1/t153mx-omnigate-immortalwrt-v25.12.2.config) | 从官方源码自行构建 |
-| [离线 APK 备份](https://github.com/dshanpi/OmniGateT153-Openwrt25/releases/download/v25.12.2-t153-immortalwrt-preview.1/immortalwrt-25.12.2-t153-apk-packages.tar.gz) | 仅含本镜像实际安装的 277 个包，以及签名公钥 |
+| [完整 raw 镜像（推荐）](https://github.com/dshanpi/OmniGateT153-Openwrt25/releases/download/v25.12.2-t153-immortalwrt-preview.2/immortalwrt-sunxi-cortexa7-dshanpi_t153mx-omnigate-ext4-raw.img) | 未压缩，直接选择用于 FES 写入 eMMC |
+| [压缩镜像](https://github.com/dshanpi/OmniGateT153-Openwrt25/releases/download/v25.12.2-t153-immortalwrt-preview.2/immortalwrt-sunxi-cortexa7-dshanpi_t153mx-omnigate-ext4-raw.img.gz) | 解压后与上述 raw 完全相同 |
+| [独立 FES](https://github.com/dshanpi/OmniGateT153-Openwrt25/releases/download/v25.12.2-t153-immortalwrt-preview.2/t153-fes-ddr933-ram-loader.img) | 保持原文件，临时在 RAM 中运行 |
+| [SHA256SUMS](https://github.com/dshanpi/OmniGateT153-Openwrt25/releases/download/v25.12.2-t153-immortalwrt-preview.2/SHA256SUMS) · [raw 摘要](https://github.com/dshanpi/OmniGateT153-Openwrt25/releases/download/v25.12.2-t153-immortalwrt-preview.2/RAW-SHA256.txt) | 分别核对下载附件及解压后的完整盘 |
+| [板级补丁](https://github.com/dshanpi/OmniGateT153-Openwrt25/releases/download/v25.12.2-t153-immortalwrt-preview.2/immortalwrt-25.12.2-t153-preview2.patch) · [最小配置](https://github.com/dshanpi/OmniGateT153-Openwrt25/releases/download/v25.12.2-t153-immortalwrt-preview.2/t153mx-omnigate-immortalwrt-v25.12.2.config) | 从官方源码自行构建 |
+| [离线 APK 备份](https://github.com/dshanpi/OmniGateT153-Openwrt25/releases/download/v25.12.2-t153-immortalwrt-preview.2/immortalwrt-25.12.2-t153-apk-packages.tar.gz) | 仅含本镜像实际安装的 277 个包，以及签名公钥 |
 
-压缩镜像为 **20515187 字节**，解压 raw 为 **306184192 字节（292 MiB）**。raw SHA256：
+完整 raw 为 **306184192 字节（292 MiB）**，压缩镜像为 **20514207 字节**。raw SHA256：
 
 ```text
-4696ba063dba1fd148ef132cec07c1895c406426e1b553181a33c38b2819df21
+2a0baa4305fda37071734b81a86ef468915f56b0cd828d3ab44bb18c961da853
 ```
+
+`.img.gz` SHA256：
+
+```text
+9aae8312e6859c96126154b54fdb153854e3736acf5fef8985b5481602f56867
+```
+
+Windows 在镜像目录中运行 `Get-FileHash '.\immortalwrt-sunxi-cortexa7-dshanpi_t153mx-omnigate-ext4-raw.img' -Algorithm SHA256`，对照上述 raw 摘要。直接下载的 `.img` 不需要解压。
 
 离线 APK 仅对应本版内核和包签名。其它固件的 kmod 即使同为 6.12，也不能强制混装；完整系统升级仍使用 raw/FES 流程。归档不包含签名私钥。
 
@@ -237,7 +257,7 @@ flowchart TB
 
 1. 备份配置和数据。完整盘烧录会覆盖 eMMC 分区表及镜像范围；移除可能带有相同 PARTUUID 的 SD 卡。
 2. 将目标板进入 FEL，通过 USB 数据口连接烧录主机。扫描确认 T153：USB `1f3a:efe8`，SoC `0x1922`。未进入 FEL 时不启动烧录。
-3. 校验 loader 与镜像摘要，将 `raw.img.gz` 解压为完整 `raw.img`。记录 raw 的实际大小和 SHA256。FES 输入不能选 gzip 文件、rootfs、FIT 或 initramfs。
+3. 校验 loader 与镜像摘要。直接下载 `.img` 可直接选择；下载 `.img.gz` 时先解压为完整 `.img`。记录 raw 的实际大小和 SHA256。FES 输入不能选 gzip 文件、rootfs、FIT 或 initramfs。
 4. 在支持该 loader 的 LYNX/OpenixCLI raw 流程中选择完整 raw 和独立 loader，启用写入校验与烧录后重启。预检需要串口独占时，先关闭其它串口终端。
 5. 等待同一任务完成。必须同时得到 `state=success`、`exitCode=0`、`verifyState=success`、`postFlashState=success`，且 `writtenBytes=committedBytes=实际 raw 字节数`。进度 100% 不等于写入校验成功。
 6. 保存完整任务状态和 UART0 启动日志，继续进行系统验收。串口采用 3.3 V TTL、115200、8N1、无流控。
@@ -345,6 +365,8 @@ ethtool eth1
 | 官方源码归档 + 单补丁 | 干净归档测试通过，83 个变更文件一致 |
 | 常规 feeds / defconfig / make | 编译退出码 0，固定 feeds 提交未改动 |
 | SPL/U-Boot、磁盘分区、FIT 与设备树 | 通过；四个 CPU 节点、384 MiB Linux 内存窗口 |
+| SPL 与旧实测基线比较 | 49,152 字节完全一致；SHA256 `3a0924528fa82d67a87ac4d229be14393e35f90855972b66f7ee4b51a512d73e` |
+| Openix SPL 提取与校验 | 原样校验函数检查通过，长度、版本、魔数、校验和符合要求；不等同于运行完整 Windows 烧录任务 |
 | 内核与根文件系统 | Linux 6.12.103；普通持久根文件系统启动，非完整 initramfs 系统 |
 | 包和 HTTPS 后端 | 67 个必选包的配置、manifest、镜像数据库一致；仅 OpenSSL ustream 后端 |
 | AIC8800D80 | 两个 ARM 模块均匹配 6.12.103 SMP，15 个固件文件摘要通过 |

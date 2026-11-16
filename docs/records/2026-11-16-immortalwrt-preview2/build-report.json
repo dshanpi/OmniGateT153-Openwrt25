@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "distribution": "ImmortalWrt",
+  "release": "25.12.2",
+  "revision": "r38135-0c4cd0f9920a",
+  "kernel": "6.12.103",
+  "upstream_commit": "4fc16f2985a358bd43bb522e43f05395fcbd6ed5",
+  "build_exit_code": 0,
+  "finished_utc": "2026-11-16T11:28:19.466749+00:00",
+  "final_patch_sha256": "ea3aa43db99dcc2c6f947441a74b0711f5a6609220da43af1dd3f05344b60817",
+  "image": {
+    "path": "/home/ubuntu/T153MX/immortalwrt25-t153/source/bin/targets/sunxi/cortexa7/immortalwrt-sunxi-cortexa7-dshanpi_t153mx-omnigate-ext4-raw.img.gz",
+    "bytes": 20514207,
+    "sha256": "9aae8312e6859c96126154b54fdb153854e3736acf5fef8985b5481602f56867"
+  },
+  "raw_image": {
+    "path": "/home/ubuntu/T153MX/immortalwrt25-t153/artifacts/preview2/immortalwrt-sunxi-cortexa7-dshanpi_t153mx-omnigate-ext4-raw.img",
+    "bytes": 306184192,
+    "sha256": "2a0baa4305fda37071734b81a86ef468915f56b0cd828d3ab44bb18c961da853",
+    "retained": true
+  },
+  "required_package_count": 67,
+  "installed_package_count": 277,
+  "https_backend": {
+    "exclusive_backend": "libustream-openssl20201210",
+    "backend_version": "2026.03.01~99f1c0db-r1",
+    "openssl_library": "libopenssl3",
+    "openssl_version": "3.5.7-r1",
+    "luci_meta_package": "luci-ssl-openssl",
+    "certificate_tool": "px5g-openssl",
+    "config_manifest_and_image_database_agree": true,
+    "libmbedtls_allowed_for_wpad": true
+  },
+  "source_ddr": true,
+  "hardware_validation": "not_performed",
+  "known_limits": [
+    "Linux RAM window 384 MiB of 1 GiB",
+    "WAN gigabit stability issue unresolved",
+    "No qualified sysupgrade",
+    "New image Wi-Fi/BT/4G/mwan3 runtime validation pending"
+  ],
+  "release_tag": "v25.12.2-t153-immortalwrt-preview.2",
+  "build_mode": "source SPL/U-Boot rebuild, then normal incremental make -j6",
+  "bootloader_source_date_epoch": 1792282260,
+  "bootloader_localversion": "-OpenWrt-r33311-981c978eff",
+  "bootarea": {
+    "spl_bytes": 49152,
+    "proper_bytes": 271872,
+    "bytes": 394752,
+    "sha256": "dbbbbd1a253db23769538604587fa736f4134ca1d5e1fc7478eb20f467a08242",
+    "spl_offset": 8192,
+    "proper_offset": 131072
+  },
+  "spl_byte_identical_to_openwrt_baseline": true,
+  "proper_uboot_note": "Current compiler banner retained; only cmd/version.o differs in allocated sections from OpenWrt baseline.",
+  "previous_failure_root_cause": "not established; regeneration is not proof of a hardware or flasher fix"
+}
