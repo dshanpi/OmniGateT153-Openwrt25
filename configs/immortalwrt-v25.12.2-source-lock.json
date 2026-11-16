@@ -1,0 +1,33 @@
+{
+  "upstream": {
+    "repository": "https://github.com/immortalwrt/immortalwrt",
+    "tag": "v25.12.2",
+    "tag_object": "bfc8bae082b913eb60e3247bb3e3a9cb3a6fde55",
+    "commit": "4fc16f2985a358bd43bb522e43f05395fcbd6ed5",
+    "source_url": "https://codeload.github.com/immortalwrt/immortalwrt/tar.gz/refs/tags/v25.12.2",
+    "archive_sha256": "1126f61d9d300d165221419f54fef847dda955c9cb80a817f4b71b7c2fa187eb",
+    "version": "r38135-0c4cd0f9920a",
+    "source_date_epoch": 1788681816,
+    "kernel": "6.12.103"
+  },
+  "baseline_t153_patch": {
+    "name": "openwrt-25.12.6-t153.patch",
+    "sha256": "338dc6fbc70663a73416e984f1c148b0d5bfd02793294ef13160efd353889690"
+  },
+  "hardware_validation": {
+    "status": "not_performed_for_this_image"
+  },
+  "feeds_conf_default": "src-git packages https://github.com/immortalwrt/packages.git^84bd86384928955b568988ca0e09e2c78c75173d\nsrc-git luci https://github.com/immortalwrt/luci.git^d6167ea0645cbd1327708d85f94824f42d0eb872\nsrc-git routing https://github.com/openwrt/routing.git^e49d76035aafb85ddc993b59271d8c7ba56b5362\nsrc-git telephony https://github.com/openwrt/telephony.git^2618106d5846a4a542fdf5809f0d3ed228ce439b\nsrc-git video https://github.com/openwrt/video.git^094bf58da6682f895255a35a84349a79dab4bf95\n",
+  "source_port": {
+    "patch": "immortalwrt-25.12.2-t153.patch",
+    "sha256": "d6f0b0a19dbf9b6c8569d223d6aacb63cf2c19cbfc357898f0caa30dc3ad9756",
+    "files": 83,
+    "clean_archive_patch_test": "pass"
+  },
+  "build_policy": {
+    "source_tree": "independent",
+    "download_cache": "reused; hashes checked by build system",
+    "old_toolchain_or_staging_reused": false,
+    "bootable_flash_operation_performed": false
+  }
+}

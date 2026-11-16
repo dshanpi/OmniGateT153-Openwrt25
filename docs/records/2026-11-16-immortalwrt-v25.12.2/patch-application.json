@@ -1,0 +1,8 @@
+{
+  "result": "pass",
+  "patch_sha256": "d6f0b0a19dbf9b6c8569d223d6aacb63cf2c19cbfc357898f0caa30dc3ad9756",
+  "files_matched": 83,
+  "unchanged_upstream_version_epoch_and_feeds": true,
+  "image_verified": false,
+  "hardware_verified": false
+}

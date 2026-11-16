@@ -1,0 +1,7 @@
+{
+  "result": "pass",
+  "root_password": "unset; set on first login",
+  "generated_device_private_keys": false,
+  "build_host_and_prior_board_addresses_in_uci_defaults": false,
+  "scope": "Checks installed image inputs; software checks only."
+}

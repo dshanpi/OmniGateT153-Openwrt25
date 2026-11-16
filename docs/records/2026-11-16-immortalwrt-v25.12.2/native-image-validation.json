@@ -1,0 +1,469 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "hardware_verified": false,
+  "verifier": {
+    "path": "/home/ubuntu/T153MX/immortalwrt25-t153/tests/verify-image.py",
+    "bytes": 44205,
+    "sha256": "8ed1efad8f14c07257a71335a8c7c9f9d4ccc79b0d0f66b3b677a93e03b06578"
+  },
+  "created_utc": "2026-11-16T10:31:35.018195+00:00",
+  "expected_identity": {
+    "distribution": "ImmortalWrt",
+    "release": "25.12.2",
+    "revision": "r38135-0c4cd0f9920a",
+    "kernel": "6.12.103",
+    "source_date_epoch": 1788681816,
+    "kernel_archive_sha256": "f143aaade8877ba5616e788b4482576db28481bcf557ef537f4fcc3938fc3176"
+  },
+  "source": "/home/ubuntu/T153MX/immortalwrt25-t153/source",
+  "image": {
+    "path": "/home/ubuntu/T153MX/immortalwrt25-t153/source/bin/targets/sunxi/cortexa7/immortalwrt-sunxi-cortexa7-dshanpi_t153mx-omnigate-ext4-raw.img.gz",
+    "bytes": 20515187,
+    "sha256": "a71a6397f42ecfa394464497a27a34a7f4d94c9cc4d96109c63519b1919cc318"
+  },
+  "config": {
+    "path": "/home/ubuntu/T153MX/immortalwrt25-t153/source/.config",
+    "bytes": 311511,
+    "sha256": "07cc36d72a4ae6d7612a0d051fcf5d43a4c9bdb8a8b334c9d0b204e16c0be662"
+  },
+  "source_date_epoch": 1788681816,
+  "rootfs_mib": 256,
+  "scope": "Software-only final ImmortalWrt image validation; no board access or hardware claims.",
+  "raw_image": {
+    "path": "/home/ubuntu/T153MX/immortalwrt25-t153/artifacts/immortalwrt-t153-v25.12.2-raw.img",
+    "bytes": 306184192,
+    "sha256": "4696ba063dba1fd148ef132cec07c1895c406426e1b553181a33c38b2819df21",
+    "retained": true
+  },
+  "bootarea": {
+    "spl_bytes": 49152,
+    "proper_bytes": 271880,
+    "bytes": 394760,
+    "sha256": "afdafeb9cdbdef6aab408cda0f619946acf6c73af12875cbb5cb081aba7e16e4",
+    "spl_offset": 8192,
+    "proper_offset": 131072
+  },
+  "uboot_build": {
+    "upstream": "U-Boot 2026.07",
+    "source_ddr": true,
+    "vendor_ddr_or_monitor": false,
+    "profile": "dshanpi_t153_source_1g_smp",
+    "physical_ddr_mib": 1024,
+    "usable_dram_mib": 384,
+    "linux_cpus": 4,
+    "psci": "0.1 CPU_ON only",
+    "disk_spl_offset": 8192,
+    "disk_uboot_offset": 131072,
+    "file_uboot_offset": 122880,
+    "secure_sram_sections": {
+      ".secure_text": {
+        "start": 327680,
+        "bytes": 1688
+      },
+      ".secure_data": {
+        "start": 329368,
+        "bytes": 64
+      },
+      ".secure_stack": {
+        "start": 333464,
+        "bytes": 6504
+      }
+    },
+    "image": "u-boot-t153-with-spl.bin",
+    "bytes": 394760,
+    "sha256": "afdafeb9cdbdef6aab408cda0f619946acf6c73af12875cbb5cb081aba7e16e4",
+    "spl_sha256": "c1eef7d7738d6d2928aab0ca10bc32d334d6a1d386d49291ea0f8505e6390998",
+    "uboot_img_sha256": "4857f972e4d64ecc64251f84584e7a1d2fdf096045411b0c81da5e7f89ea7bcc",
+    "config_sha256": "6e0217e81384522503a1cbe9e9e7e26288bec97f8ad9f5e5154703c1139f7c51"
+  },
+  "fat_fsck": {
+    "command": [
+      "/home/ubuntu/T153MX/immortalwrt25-t153/source/staging_dir/host/bin/fsck.fat",
+      "-n",
+      "/home/ubuntu/T153MX/immortalwrt25-t153/artifacts/.t153-native-verify-jg212wi3/boot.fat"
+    ],
+    "returncode": 0,
+    "output": "fsck.fat 4.2 (2021-01-31)\n/home/ubuntu/T153MX/immortalwrt25-t153/artifacts/.t153-native-verify-jg212wi3/boot.fat: 3 files, 2094/16343 clusters\n"
+  },
+  "fit": {
+    "bytes": 4284688,
+    "sha256": "21e5fc0bfe3156171fdc22e8212ba94adc96b1bc367b87a580d1f0168ee9372b",
+    "zimage_bytes": 4280728,
+    "zimage_sha256": "3821f39451f9d2f2e246066c5f572bd29634b72ae5ed2464a71c2ada7c620746",
+    "dtb_sha256": "224214306aab5f5e73e5532174375ae4c365401be41ceba90daa64e647260ee2",
+    "load": "0x48008000",
+    "entry": "0x48008000",
+    "cpu_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "dtb_note": "Raw DT is fixed up by source U-Boot; no runtime memory/PSCI claim."
+  },
+  "kernel": {
+    "version": "6.12.103",
+    "codec": "xz",
+    "payload_offset": 27711,
+    "decoded_bytes": 15599528,
+    "decoded_sha256": "137ecdc56258b42f22e8c763089c342a31dc40b3dfbd8e97a8dc75daed160f58",
+    "ordinary_elf": {
+      "path": "/home/ubuntu/T153MX/immortalwrt25-t153/source/build_dir/target-arm_cortex-a7+neon-vfpv4_musl_eabi/linux-sunxi_cortexa7/vmlinux.debug",
+      "bytes": 69217472,
+      "sha256": "7d999ddf4ae048b2aba5c72fa2a114c35d100f44e88c1fbf310c6a9916753a84"
+    },
+    "elf_payload_identical": true,
+    "populated_initramfs": false,
+    "has_init": false,
+    "builtin_cpio_bytes": 512,
+    "builtin_cpio_entries": {
+      "dev": {
+        "mode": "0o40755",
+        "bytes": 0
+      },
+      "dev/console": {
+        "mode": "0o20600",
+        "bytes": 0
+      },
+      "root": {
+        "mode": "0o40700",
+        "bytes": 0
+      }
+    }
+  },
+  "boot_script": {
+    "sha256": "bc853f7cb1a49dd36249db063c5fb36bf07ce5e80e1a0968113dc75885719476",
+    "timestamp": 1788681816,
+    "partuuid": "15302512-02"
+  },
+  "original_rootfs": {
+    "path": "/home/ubuntu/T153MX/immortalwrt25-t153/source/build_dir/target-arm_cortex-a7+neon-vfpv4_musl_eabi/linux-sunxi_cortexa7/root.ext4",
+    "bytes": 268435456,
+    "sha256": "2850bee89d7bb4866b85682d9c07f82d0d7915f5598dd5e04a437fffe44734e4"
+  },
+  "original_rootfs_fsck": {
+    "command": [
+      "/home/ubuntu/T153MX/immortalwrt25-t153/source/staging_dir/host/bin/e2fsck",
+      "-f",
+      "-n",
+      "/home/ubuntu/T153MX/immortalwrt25-t153/source/build_dir/target-arm_cortex-a7+neon-vfpv4_musl_eabi/linux-sunxi_cortexa7/root.ext4"
+    ],
+    "returncode": 4,
+    "output": "e2fsck 1.47.3 (8-Jul-2025)\nPass 1: Checking inodes, blocks, and sizes\nPass 2: Checking directory structure\nPass 3: Checking directory connectivity\nPass 4: Checking reference counts\nPass 5: Checking group summary information\nPadding at end of inode bitmap is not set. Fix? no\n\n\nrootfs: ********** WARNING: Filesystem still has errors **********\n\nrootfs: 2452/16384 files (0.0% non-contiguous), 12483/65536 blocks\n"
+  },
+  "normalization": {
+    "command": [
+      "/home/ubuntu/T153MX/immortalwrt25-t153/source/staging_dir/host/bin/e2fsck",
+      "-p",
+      "-f",
+      "/home/ubuntu/T153MX/immortalwrt25-t153/artifacts/.t153-native-verify-jg212wi3/normalized.ext4"
+    ],
+    "returncode": 1,
+    "output": "rootfs: Padding at end of inode bitmap is not set. FIXED.\nrootfs: 2452/16384 files (0.0% non-contiguous), 12483/65536 blocks\n"
+  },
+  "normalized_rootfs_fsck": {
+    "command": [
+      "/home/ubuntu/T153MX/immortalwrt25-t153/source/staging_dir/host/bin/e2fsck",
+      "-f",
+      "-n",
+      "/home/ubuntu/T153MX/immortalwrt25-t153/artifacts/.t153-native-verify-jg212wi3/normalized.ext4"
+    ],
+    "returncode": 0,
+    "output": "e2fsck 1.47.3 (8-Jul-2025)\nPass 1: Checking inodes, blocks, and sizes\nPass 2: Checking directory structure\nPass 3: Checking directory connectivity\nPass 4: Checking reference counts\nPass 5: Checking group summary information\nrootfs: 2452/16384 files (0.0% non-contiguous), 12483/65536 blocks\n"
+  },
+  "final_rootfs": {
+    "path": "/home/ubuntu/T153MX/immortalwrt25-t153/artifacts/.t153-native-verify-jg212wi3/root.ext4",
+    "bytes": 268435456,
+    "sha256": "e158efa0ee9d0d353f6d53792dd4a316b3dc1aa7bc6ba2f904c905e6108dd624",
+    "retained": false,
+    "disk_offset": 37748736
+  },
+  "final_rootfs_fsck": {
+    "command": [
+      "/home/ubuntu/T153MX/immortalwrt25-t153/source/staging_dir/host/bin/e2fsck",
+      "-f",
+      "-n",
+      "/home/ubuntu/T153MX/immortalwrt25-t153/artifacts/.t153-native-verify-jg212wi3/root.ext4"
+    ],
+    "returncode": 0,
+    "output": "e2fsck 1.47.3 (8-Jul-2025)\nPass 1: Checking inodes, blocks, and sizes\nPass 2: Checking directory structure\nPass 3: Checking directory connectivity\nPass 4: Checking reference counts\nPass 5: Checking group summary information\nrootfs: 2452/16384 files (0.0% non-contiguous), 12483/65536 blocks\n"
+  },
+  "rootfs_metadata_delta": {
+    "changed_bytes": 3087,
+    "changes_by_region": {
+      "superblock_write_time": 4,
+      "superblock_lastcheck": 4,
+      "inode_table_unused_count": 3,
+      "group_descriptor_checksum": 4,
+      "inode_bitmap_unused_padding": 3072
+    },
+    "file_data_and_inode_tables_unchanged": true,
+    "block_size": 4096,
+    "block_groups": 2,
+    "inodes": 16384,
+    "inode_table_unused_corrections": [
+      {
+        "group": 0,
+        "before": 0,
+        "after": 5740,
+        "independently_computed": 5740
+      },
+      {
+        "group": 1,
+        "before": 0,
+        "after": 8192,
+        "independently_computed": 8192
+      }
+    ]
+  },
+  "rootfs_relationship": "Private e2fsck normalization only; original build input preserved. Hash difference is disclosed, not claimed byte-identical.",
+  "installed_files": {
+    "/etc/openwrt_release": {
+      "bytes": 248,
+      "sha256": "2942113166a45e340c591d43fa9a8cc64ac02950e8c0fa5bce272e2320daa2f0"
+    },
+    "/usr/lib/os-release": {
+      "bytes": 726,
+      "sha256": "8bb1bd63bfc4964198733a3a0f41f442887ac1b3e1dcbb0825a98188c73e0b13"
+    },
+    "/sbin/init": {
+      "bytes": 12489,
+      "sha256": "83c95d1b09d464a7975cbf500fd02f0f815c428da23f53f11b50e5ae3268a478"
+    },
+    "/sbin/procd": {
+      "bytes": 83909,
+      "sha256": "07e7f65b5250dca857576bb4bd0978ae0ca583c4191ce57e9f6f6f4195f6151c"
+    },
+    "/etc/board.d/02_network": {
+      "bytes": 2151,
+      "sha256": "aca51dd7725f697ed37140401fd88ab4e2dcb99488e9c57d208bfab57c1ae057"
+    },
+    "/lib/upgrade/platform.sh": {
+      "bytes": 3100,
+      "sha256": "0c5ce8ec1c16a0e57cc29a2bd1476bf7b4f8f9cb54b61a0b453d37d9649acebd"
+    },
+    "/etc/config/firewall": {
+      "bytes": 4159,
+      "sha256": "6dd761129990dbd4af74f9e886737dd07399f159a49457b61cace2d4da432dee"
+    },
+    "/etc/uci-defaults/99-t153-immortal": {
+      "bytes": 1254,
+      "sha256": "b734e0f3a825280c27c1ffa328e0a0e999027cfc1c74d6538f917520a30d43bb"
+    },
+    "/usr/sbin/aic8800d80-bt": {
+      "bytes": 12287,
+      "sha256": "39542ae105e52ca7a91d68401a9846c77fc353e50102035eaee041d18f5e3be4"
+    },
+    "/etc/init.d/aic8800d80-bt": {
+      "bytes": 1555,
+      "sha256": "8ba094eb64df49bea95b3eb5101ab882bf3a2a0bbba28f636a26c1fad679482d"
+    },
+    "/etc/config/aic8800d80-bt": {
+      "bytes": 255,
+      "sha256": "92ed4aaa54b49970d9802360b4e547c2769f9a0ab1bb131a9e88ce508086230d"
+    }
+  },
+  "packages": {
+    "requirements": {
+      "path": "/home/ubuntu/T153MX/immortalwrt25-t153/tests/required-packages.json",
+      "bytes": 1879,
+      "sha256": "fe1a8ba12742bc29bb48ee23af4d757a8d177d1e8af64868859b6280f63bdf52"
+    },
+    "manifest": {
+      "path": "/home/ubuntu/T153MX/immortalwrt25-t153/source/bin/targets/sunxi/cortexa7/immortalwrt-sunxi-cortexa7-dshanpi_t153mx-omnigate.manifest",
+      "bytes": 8471,
+      "sha256": "2a256c0d059724434f573bfc40b3bff46febb988630c267c888f4cbd868d54d7"
+    },
+    "database_path": "/lib/apk/db/installed",
+    "database_sha256": "5f1b5dee48b77e6c84497db1aff9672788d82622b851197cdb1bed6bfa0643ec",
+    "required_count": 67,
+    "required_packages": {
+      "luci": "26.249.28459~d6167ea",
+      "luci-ssl-openssl": "26.249.28459~d6167ea",
+      "ethtool": "6.15-r1",
+      "ip-full": "6.18.0-r2",
+      "kmod-usb2": "6.12.103-r1",
+      "kmod-usb-ohci": "6.12.103-r1",
+      "kmod-usb-storage": "6.12.103-r1",
+      "usbutils": "019-r1",
+      "kmod-can": "6.12.103-r1",
+      "kmod-can-raw": "6.12.103-r1",
+      "kmod-can-t153": "6.12.103-r1",
+      "canutils": "2025.01-r1",
+      "canutils-candump": "2025.01-r1",
+      "canutils-cansend": "2025.01-r1",
+      "canutils-canfdtest": "2025.01-r1",
+      "kmod-usb-net-qmi-wwan": "6.12.103-r1",
+      "kmod-usb-net-cdc-mbim": "6.12.103-r1",
+      "kmod-usb-serial-option": "6.12.103-r1",
+      "kmod-usb-serial-qualcomm": "6.12.103-r1",
+      "kmod-usb-net-cdc-ether": "6.12.103-r1",
+      "kmod-usb-net-rndis": "6.12.103-r1",
+      "uqmi": "2025.07.30~7914da43-r2",
+      "umbim": "2025.10.04~2939b7d0-r1",
+      "luci-proto-qmi": "26.249.28459~d6167ea",
+      "luci-proto-mbim": "26.249.28459~d6167ea",
+      "luci-proto-3g": "26.249.28459~d6167ea",
+      "kmod-ppp": "6.12.103-r1",
+      "ppp": "2.5.2-r4",
+      "comgt": "0.32-r36",
+      "picocom": "3.1-r5",
+      "kmod-cfg80211": "6.12.103.6.18.39-r1",
+      "kmod-aic8800-t153-sdio": "6.12.103.2026.11.05-r1",
+      "aic8800d80-firmware": "2026.11.05-r1",
+      "iw": "6.17-r1",
+      "wpad-basic-mbedtls": "2025.08.26~ca266cc2-r2",
+      "kmod-bluetooth": "6.12.103-r1",
+      "kmod-hci-uart": "6.12.103-r1",
+      "kmod-rfkill": "6.12.103-r1",
+      "kmod-rfkill-gpio": "6.12.103.2026.11.05-r1",
+      "bluez-utils": "5.83-r1",
+      "bluez-daemon": "5.83-r1",
+      "aic8800d80-bt": "2026.11.05-r2",
+      "t153-immortal-defaults": "1-r1",
+      "luci-theme-argon": "2.4.7-r20260824",
+      "luci-app-argon-config": "26.249.28459~d6167ea",
+      "luci-i18n-base-zh-cn": "26.249.28459~d6167ea",
+      "luci-i18n-firewall-zh-cn": "26.249.28459~d6167ea",
+      "luci-i18n-argon-config-zh-cn": "26.249.28459~d6167ea",
+      "luci-app-3ginfo-lite": "1.0.76-r20250609",
+      "luci-i18n-3ginfo-lite-zh-cn": "26.249.28459~d6167ea",
+      "luci-app-sms-tool-js": "2.0.29-r20250609",
+      "luci-i18n-sms-tool-js-zh-cn": "26.249.28459~d6167ea",
+      "luci-app-mwan3": "26.249.28459~d6167ea",
+      "luci-i18n-mwan3-zh-cn": "26.249.28459~d6167ea",
+      "mwan3": "2.12.0-r3",
+      "iptables-nft": "1.8.10-r3",
+      "ip6tables-nft": "1.8.10-r3",
+      "luci-app-smartdns": "1.2025.47.2-r1",
+      "luci-i18n-smartdns-zh-cn": "26.249.28459~d6167ea",
+      "smartdns": "48.4-r1",
+      "luci-app-ddns": "26.249.28459~d6167ea",
+      "luci-i18n-ddns-zh-cn": "26.249.28459~d6167ea",
+      "ddns-scripts": "2.8.3-r5",
+      "luci-app-nlbwmon": "26.249.28459~d6167ea",
+      "luci-i18n-nlbwmon-zh-cn": "26.249.28459~d6167ea",
+      "nlbwmon": "2025.06.02~29236be6-r1",
+      "px5g-openssl": "1"
+    },
+    "excluded_packages_absent": [
+      "kmod-aic8800-sdio",
+      "luci-app-modemband",
+      "modemband",
+      "luci-app-ddns-go",
+      "ddns-go",
+      "automount",
+      "autocore",
+      "luci-app-cpufreq",
+      "luci-ssl",
+      "px5g-mbedtls",
+      "libustream-mbedtls",
+      "libustream-wolfssl"
+    ],
+    "https_backend": {
+      "exclusive_backend": "libustream-openssl20201210",
+      "backend_version": "2026.03.01~99f1c0db-r1",
+      "openssl_library": "libopenssl3",
+      "openssl_version": "3.5.7-r1",
+      "luci_meta_package": "luci-ssl-openssl",
+      "certificate_tool": "px5g-openssl",
+      "config_manifest_and_image_database_agree": true,
+      "libmbedtls_allowed_for_wpad": true
+    },
+    "config_manifest_and_image_database_agree": true
+  },
+  "aic8800d80": {
+    "scope": "Final disk bytes checked; no module loading, radio initialization or hardware verification.",
+    "expected_kernel": "6.12.103",
+    "smp_required": true,
+    "firmware_source_manifest": {
+      "path": "/home/ubuntu/T153MX/immortalwrt25-t153/source/package/kernel/aic8800-t153-sdio/files/firmware-sha256.json",
+      "bytes": 1610,
+      "sha256": "f4f406561550ef31c0d0e9890a97ef82fabc0a8dace47e8ab70f36c8f7bc7866"
+    },
+    "firmware_source_commit": "d9c72efd382ccdbf2f1fdb09d2d4f3cc212edd9d",
+    "firmware_files": {
+      "/lib/firmware/aic8800D80/aic_powerlimit_8800d80.txt": {
+        "bytes": 3688,
+        "sha256": "a21645878dd5a065c48eaf4aee36349d214fd43e530a47af23973e5e81b9904a"
+      },
+      "/lib/firmware/aic8800D80/aic_userconfig_8800d80.txt": {
+        "bytes": 2724,
+        "sha256": "56c039d10af63c888b18890f508968a143f034de279fd2c4ec7ee65133e3dbdb"
+      },
+      "/lib/firmware/aic8800D80/fmacfw_8800d80_h_u02.bin": {
+        "bytes": 341768,
+        "sha256": "6c197eacc6917e253c2085fd3b3da0879005d0ebe37ccde3bd4be38f261f9b4e"
+      },
+      "/lib/firmware/aic8800D80/fmacfw_8800d80_h_u02_ipc.bin": {
+        "bytes": 341768,
+        "sha256": "6c197eacc6917e253c2085fd3b3da0879005d0ebe37ccde3bd4be38f261f9b4e"
+      },
+      "/lib/firmware/aic8800D80/fmacfw_8800d80_u02.bin": {
+        "bytes": 341200,
+        "sha256": "d2c7b7ac0bf8682c976c0c2da34f204c9b2f1ef8821252c6348a3016bd638f24"
+      },
+      "/lib/firmware/aic8800D80/fmacfw_8800d80_u02_ipc.bin": {
+        "bytes": 341200,
+        "sha256": "d2c7b7ac0bf8682c976c0c2da34f204c9b2f1ef8821252c6348a3016bd638f24"
+      },
+      "/lib/firmware/aic8800D80/fmacfwbt_8800d80_h_u02.bin": {
+        "bytes": 333804,
+        "sha256": "f7fa0a1a296589568fbea1de89ab8feeb13ef2e6db6c7fafa682a34fb583a1bd"
+      },
+      "/lib/firmware/aic8800D80/fmacfwbt_8800d80_u02.bin": {
+        "bytes": 333236,
+        "sha256": "b1533e09be3812aeb4930414a4ef259b49703ff5dc51c69cd9b7cfd534273168"
+      },
+      "/lib/firmware/aic8800D80/fw_adid_8800d80_u02.bin": {
+        "bytes": 1708,
+        "sha256": "a526cbd02fcdc495f049f3ad6b5933cb08cd984b16790c716a060d582fee1a56"
+      },
+      "/lib/firmware/aic8800D80/fw_patch_8800d80_u02.bin": {
+        "bytes": 32700,
+        "sha256": "f0e2f5bbc17bc327ca7f1574ff55370dfd863d931514347bb4abc18a74f6218f"
+      },
+      "/lib/firmware/aic8800D80/fw_patch_8800d80_u02_ext0.bin": {
+        "bytes": 16136,
+        "sha256": "ca738f5ea5aca6021c4f48b60ff35e835dfdaf072a8490e3ba8ba0a42440e3e5"
+      },
+      "/lib/firmware/aic8800D80/fw_patch_8800d80_u04.bin": {
+        "bytes": 4800,
+        "sha256": "3e3f966e18610f5cb154a47a884c8a805e9307223df3e17a703582778f162337"
+      },
+      "/lib/firmware/aic8800D80/fw_patch_table_8800d80_u02.bin": {
+        "bytes": 1384,
+        "sha256": "9decb77435b7e9713e33e32da483d683b7329ed93b672b2d1b134031d7da5f67"
+      },
+      "/lib/firmware/aic8800D80/fw_patch_table_8800d80_u04.bin": {
+        "bytes": 416,
+        "sha256": "6d7862576f665aa4a73ae4728ff418870c784fc6e2b965ed0417396fd7d5d9e2"
+      },
+      "/lib/firmware/aic8800D80/lmacfw_rf_8800d80_u02.bin": {
+        "bytes": 266902,
+        "sha256": "4d43d0707ff85b692e81dbc16d916f42f7807237ef02d5e85e3fe08256b84f3e"
+      }
+    },
+    "modules": {
+      "/lib/modules/6.12.103/aic8800_bsp.ko": {
+        "bytes": 112824,
+        "sha256": "89ee8e73c9905afb72142f2a4e75011f57135aa28aca1607e206fa3763cbce9d",
+        "vermagic": "6.12.103 SMP mod_unload ARMv7 p2v8",
+        "architecture": "ARM ELF32 little endian"
+      },
+      "/lib/modules/6.12.103/aic8800_fdrv.ko": {
+        "bytes": 585068,
+        "sha256": "bd5edea67821c8e26dcace539dc11a9933f7151f15eb96ab12b52440c1158daf",
+        "vermagic": "6.12.103 SMP mod_unload ARMv7 p2v8",
+        "architecture": "ARM ELF32 little endian"
+      }
+    },
+    "image_and_root_sunxi_identical": true
+  },
+  "checksums": {
+    "path": "/home/ubuntu/T153MX/immortalwrt25-t153/source/bin/targets/sunxi/cortexa7/sha256sums",
+    "bytes": 726,
+    "sha256": "9856a20652160661bda5c2244a36669f5e8785fa20f29ee9f8a6793f164101f1"
+  }
+}

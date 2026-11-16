@@ -6,6 +6,14 @@
 
 [下载固件](https://github.com/dshanpi/OmniGate-T153-Openwrt25/releases/tag/v25.12.6-t153-preview.1) · [使用指南](docs/USER-GUIDE.md) · [自行编译](docs/USER-GUIDE.md#build) · [硬件资料](https://github.com/dshanpi/T153MX-Tina5SDK_OmniGate)
 
+## ImmortalWrt 25.12 中文套件
+
+新增 **ImmortalWrt 25.12.2 / Argon 中文 / 4G 管理 / 多 WAN** 软件验证预览版，继续使用 T153 源码 DDR4、SPL/U-Boot、四核内核与完整 eMMC 镜像流程。默认加入 SmartDNS、DDNS 和流量统计；在正常 feeds 后选择 T153 profile 即可自动带入。
+
+[下载 ImmortalWrt 镜像与独立 FES](https://github.com/dshanpi/OmniGateT153-Openwrt25/releases/tag/v25.12.2-t153-immortalwrt-preview.1) · [编译、插件配置与烧录说明](docs/IMMORTALWRT.md) · [板级补丁](patches/immortalwrt-25.12.2-t153.patch)
+
+**完整编译和镜像软件检查已通过，本版尚未烧录及硬件验收。** Linux 可见内存仍为 384 MiB，WAN 千兆稳定性问题尚未解决，不支持 sysupgrade。eth0/LAN 管理地址仍为 `192.168.153.1`；多 WAN、SmartDNS 和 4G 拨号按实际网络配置后启用。
+
 ## 认识 OmniGate 硬件
 
 OmniGate 是基于 **全志 T153 SoC（4 × Cortex-A7）** 的工业网关 / 异构控制板，面向网络连接、工业总线与控制应用。
