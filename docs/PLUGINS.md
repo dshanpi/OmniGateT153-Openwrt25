@@ -14,15 +14,15 @@
 | --- | --- |
 | 网络与安全 | adblock-fast、banIP、PBR、SQM、UPnP、WOL、DoH DNS、ACME、Tinyproxy |
 | 运维监控 | ttyd、Watchcat、自动重启、Chrony、Commands、IRQ balance、LLDP、vnStat、tcpdump、htop、iperf3 |
-| VPN 与组网 | OpenVPN、WireGuard、ZeroTier |
+| VPN 与组网 | OpenVPN（LuCI）、WireGuard、ZeroTier |
 | 工业与串口 | ser2net、SNMP、mbusd、NATMap、GPIO/I2C/SPI 工具 |
-| 存储与 USB | Ksmbd、NFS、Diskman、Filemanager、dufs、USB 打印、Aria2 |
+| 存储与 USB | Ksmbd、NFS、Diskman、Filemanager、USB 打印、Aria2 |
 
 T153 原有的 CAN-FD、EC20/ML302 4G（QMI/MBIM/PPP）、AIC8800D80 驱动和蓝牙组件也保留在设备包中。
 
 ## 资源边界
 
-"所有能用的"按适配性实现为实用插件集合，不是把所有 feeds 包字面全选。Docker/容器、数据库、Netdata、ClamAV、qBittorrent/Transmission、大型代理套件以及依赖 Go module 缓存的 FRP/GOST/rclone/cloudflared、需要额外外部源码下载的 collectd 统计、Mosquitto/libwebsockets 和当前 ARM 工具链无法稳定构建的 MiniDLNA/FFmpeg 没有预装，避免在 1 GiB DDR4、Linux 当前 384 MiB 内存窗口和 256 MiB rootfs 上造成不可控资源占用。这些包可在有完整 Go module 缓存的构建环境中作为可选包加入；Wi-Fi 驱动虽保留，但 AIC8800D80 在现有实机启动记录中仍有上电失败，插件预装不代表该硬件已验收。
+"所有能用的"按适配性实现为实用插件集合，不是把所有 feeds 包字面全选。Docker/容器、数据库、Netdata、ClamAV、qBittorrent/Transmission、大型代理套件以及依赖 Go module 缓存的 FRP/GOST/rclone/cloudflared、Rust/LLVM 构建缓存的 dufs、需要额外外部源码下载的 collectd 统计、Mosquitto/libwebsockets 和当前 ARM 工具链无法稳定构建的 MiniDLNA/FFmpeg 没有预装，避免在 1 GiB DDR4、Linux 当前 384 MiB 内存窗口和 256 MiB rootfs 上造成不可控资源占用。这些包可在有完整 Go module 缓存的构建环境中作为可选包加入；Wi-Fi 驱动虽保留，但 AIC8800D80 在现有实机启动记录中仍有上电失败，插件预装不代表该硬件已验收。
 
 ## 文件
 

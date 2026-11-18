@@ -1,13 +1,3 @@
-diff --git a/feeds/packages/lang/rust/Makefile b/feeds/packages/lang/rust/Makefile
---- a/feeds/packages/lang/rust/Makefile
-+++ b/feeds/packages/lang/rust/Makefile
-@@ -76,7 +76,7 @@ HOST_CONFIGURE_ARGS = \
-         --enable-cargo-native-static \
-         --bootstrap-cache-path=$(DL_DIR)/rustc \
--        --set=llvm.download-ci-llvm=true \
-+        --set=llvm.download-ci-llvm=false \
-         $(TARGET_CONFIGURE_ARGS)
-
 diff --git a/target/linux/sunxi/image/t153.mk b/target/linux/sunxi/image/t153.mk
 --- a/target/linux/sunxi/image/t153.mk
 +++ b/target/linux/sunxi/image/t153.mk
@@ -28,13 +18,13 @@ diff --git a/target/linux/sunxi/image/t153.mk b/target/linux/sunxi/image/t153.mk
 +	luci-app-autoreboot luci-app-chrony luci-app-commands \
 +	luci-app-irqbalance luci-app-lldpd luci-app-vnstat2 \
 +	luci-app-https-dns-proxy luci-app-acme luci-app-tinyproxy \
-+	luci-app-openvpn luci-app-openvpn-server openvpn-openssl \
++	luci-app-openvpn openvpn-openssl \
 +	luci-proto-wireguard wireguard-tools rpcd-mod-wireguard \
 +	luci-app-zerotier \
 +	luci-app-ser2net luci-app-snmpd mbusd gpiod-tools i2c-tools spi-tools \
 +	luci-app-natmap \
 +	luci-app-ksmbd luci-app-nfs luci-app-diskman \
-+	luci-app-filemanager luci-app-dufs \
++	luci-app-filemanager \
 +	luci-app-usb-printer luci-app-aria2 \
 +	tcpdump htop iperf3 \
  	kmod-usb2 kmod-usb-ohci kmod-usb-storage usbutils \
