@@ -1,0 +1,93 @@
+{
+  "name": "t153-practical-plugin-bundle",
+  "release_basis": "ImmortalWrt 25.12.2 / T153 four-core Cortex-A7",
+  "purpose": "Preinstall practical gateway, industrial I/O, VPN, storage, monitoring and USB plugins while keeping services disabled by default.",
+  "included_groups": {
+    "network_security": [
+      "luci-app-adblock-fast",
+      "luci-app-banip",
+      "luci-app-pbr",
+      "luci-app-sqm",
+      "luci-app-upnp",
+      "luci-app-wol",
+      "luci-app-https-dns-proxy",
+      "luci-app-acme",
+      "luci-app-tinyproxy"
+    ],
+    "maintenance_monitoring": [
+      "luci-app-ttyd",
+      "luci-app-watchcat",
+      "luci-app-autoreboot",
+      "luci-app-chrony",
+      "luci-app-commands",
+      "luci-app-irqbalance",
+      "luci-app-lldpd",
+      "luci-app-vnstat2",
+      "tcpdump",
+      "htop",
+      "iperf3"
+    ],
+    "vpn_overlay": [
+      "luci-app-openvpn",
+      "openvpn-openssl",
+      "luci-proto-wireguard",
+      "wireguard-tools",
+      "rpcd-mod-wireguard",
+      "luci-app-zerotier"
+    ],
+    "industrial_i_o": [
+      "luci-app-ser2net",
+      "luci-app-snmpd",
+      "luci-app-natmap"
+    ],
+    "storage_media": [
+      "luci-app-ksmbd",
+      "luci-app-nfs",
+      "luci-app-diskman",
+      "luci-app-filemanager",
+      "luci-app-dufs",
+      "luci-app-minidlna",
+      "luci-app-usb-printer",
+      "luci-app-aria2"
+    ]
+  },
+  "intentionally_excluded": {
+    "resource_or_runtime_risk": [
+      "luci-app-docker",
+      "luci-app-dockerman",
+      "luci-app-lxc",
+      "luci-app-netdata",
+      "luci-app-clamav",
+      "luci-app-mariadb",
+      "luci-app-qbittorrent",
+      "luci-app-transmission"
+    ],
+    "proxy_suite_not_default": [
+      "luci-app-openclash",
+      "luci-app-passwall",
+      "luci-app-homeproxy",
+      "luci-app-dae",
+      "luci-app-daed"
+    ],
+    "hardware_or_platform_not_ready": [
+      "luci-app-usteer",
+      "luci-app-wifischedule",
+      "luci-app-travelmate",
+      "luci-app-modemband",
+      "luci-app-cpufreq"
+    ],
+    "alternative_storage_stack": [
+      "luci-app-samba4"
+    ],
+    "build_host_dependency_not_cached": [
+      "luci-app-frpc",
+      "luci-app-frps",
+      "luci-app-gost",
+      "luci-app-rclone",
+      "luci-app-cloudflared",
+      "luci-app-statistics",
+      "luci-app-mosquitto"
+    ]
+  },
+  "policy": "The bundle contains packages that build cleanly from the pinned feeds on the T153 build host. Go-module based FRP/GOST/rclone/cloudflared packages remain optional because their module cache is not part of the reproducible source patch; install them later from a package feed when a module cache is available."
+}

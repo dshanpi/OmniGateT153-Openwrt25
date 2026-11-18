@@ -1,0 +1,32 @@
+diff --git a/target/linux/sunxi/image/t153.mk b/target/linux/sunxi/image/t153.mk
+--- a/target/linux/sunxi/image/t153.mk
++++ b/target/linux/sunxi/image/t153.mk
+@@ -26,6 +26,7 @@
+   IMAGE/raw.img.gz := t153-sdcard | gzip
+   # The bin-only U-Boot package is selected by its BUILD_DEVICES default.
+   # It must not enter DEVICE_PACKAGES, which are installed into the rootfs.
++# The practical plugin bundle is preinstalled but services remain disabled.
+   DEVICE_PACKAGES := luci luci-ssl-openssl ethtool ip-full \
+ 	t153-immortal-defaults luci-theme-argon luci-app-argon-config \
+ 	luci-i18n-base-zh-cn luci-i18n-firewall-zh-cn \
+@@ -37,6 +38,20 @@
+ 	luci-app-ddns luci-i18n-ddns-zh-cn \
+ 	luci-app-nlbwmon luci-i18n-nlbwmon-zh-cn \
+ 	-automount -autocore -luci-app-cpufreq \
++	luci-app-adblock-fast luci-app-banip luci-app-pbr luci-app-sqm \
++	luci-app-upnp miniupnpd-nftables luci-app-wol luci-app-ttyd luci-app-watchcat \
++	luci-app-autoreboot luci-app-chrony luci-app-commands \
++	luci-app-irqbalance luci-app-lldpd luci-app-vnstat2 \
++	luci-app-https-dns-proxy luci-app-acme luci-app-tinyproxy \
++	luci-app-openvpn luci-app-openvpn-server openvpn-openssl \
++	luci-proto-wireguard wireguard-tools rpcd-mod-wireguard \
++	luci-app-zerotier \
++	luci-app-ser2net luci-app-snmpd mbusd gpiod-tools i2c-tools spi-tools \
++	luci-app-natmap \
++	luci-app-ksmbd luci-app-nfs luci-app-diskman \
++	luci-app-filemanager luci-app-dufs luci-app-minidlna \
++	luci-app-usb-printer luci-app-aria2 \
++	tcpdump htop iperf3 \
+ 	kmod-usb2 kmod-usb-ohci kmod-usb-storage usbutils \
+ 	kmod-can kmod-can-raw kmod-can-t153 \
+ 	canutils canutils-candump canutils-cansend canutils-canfdtest \

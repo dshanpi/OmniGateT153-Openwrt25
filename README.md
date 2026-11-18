@@ -38,6 +38,10 @@ docs/                 构建、烧录、验收与历史资料
 
 `port/immortalwrt/` 用于阅读和维护，不要将整个目录直接复制覆盖官方源码。实际构建使用 `patches/immortalwrt-25.12.2-t153-r1.patch`；完整步骤见 [BUILD.md](docs/BUILD.md)。旧版 OpenWrt 与历史文档仍保留，r1 操作以本分支入口和发布附件为准。
 
+## 插件扩展分支
+
+需要工业网关常用能力时，使用专用分支 [`immortalwrt-25.12-t153-plugins`](https://github.com/dshanpi/OmniGateT153-Openwrt25/tree/immortalwrt-25.12-t153-plugins)。它在 r1 板级补丁上加入网络安全、监控、VPN、串口工业和 USB/存储插件；服务默认关闭，完整清单、构建和烧录方法见 [`docs/PLUGINS.md`](docs/PLUGINS.md)、[`docs/BUILD-PLUGINS.md`](docs/BUILD-PLUGINS.md) 和 [`docs/FLASH-PLUGINS.md`](docs/FLASH-PLUGINS.md)。
+
 ## 固定版本
 
 | 项目 | r1 |
