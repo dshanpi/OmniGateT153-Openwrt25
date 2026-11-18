@@ -40,7 +40,7 @@ docs/                 构建、烧录、验收与历史资料
 
 ## 插件扩展分支
 
-需要工业网关常用能力时，使用专用分支 [`immortalwrt-25.12-t153-plugins`](https://github.com/dshanpi/OmniGateT153-Openwrt25/tree/immortalwrt-25.12-t153-plugins)。它在 r1 板级补丁上加入网络安全、监控、VPN、串口工业和 USB/存储插件；服务默认关闭，完整清单、构建和烧录方法见 [`docs/PLUGINS.md`](docs/PLUGINS.md)、[`docs/BUILD-PLUGINS.md`](docs/BUILD-PLUGINS.md) 和 [`docs/FLASH-PLUGINS.md`](docs/FLASH-PLUGINS.md)。
+需要工业网关常用能力时，使用专用分支 [`immortalwrt-25.12-t153-plugins`](https://github.com/dshanpi/OmniGateT153-Openwrt25/tree/immortalwrt-25.12-t153-plugins)。它在 r1 板级补丁上加入网络安全、监控、VPN、串口工业和 USB/存储插件；服务默认关闭，完整清单、构建和烧录方法见 [`docs/PLUGINS.md`](docs/PLUGINS.md)、[`docs/BUILD-PLUGINS.md`](docs/BUILD-PLUGINS.md)、[`docs/FLASH-PLUGINS.md`](docs/FLASH-PLUGINS.md) 和 [`RELEASE-PLUGINS.md`](RELEASE-PLUGINS.md)。
 
 ## 固定版本
 

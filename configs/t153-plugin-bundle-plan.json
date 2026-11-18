@@ -46,7 +46,6 @@
       "luci-app-diskman",
       "luci-app-filemanager",
       "luci-app-dufs",
-      "luci-app-minidlna",
       "luci-app-usb-printer",
       "luci-app-aria2"
     ]
@@ -89,5 +88,5 @@
       "luci-app-mosquitto"
     ]
   },
-  "policy": "The bundle contains packages that build cleanly from the pinned feeds on the T153 build host. Go-module based FRP/GOST/rclone/cloudflared packages remain optional because their module cache is not part of the reproducible source patch; install them later from a package feed when a module cache is available."
+  "policy": "The bundle contains packages that build cleanly from the pinned feeds on the T153 build host. Rust is built with LLVM from source because the upstream CI LLVM archive is not reproducible. Go-module based FRP/GOST/rclone/cloudflared packages remain optional because their module cache is not part of the reproducible source patch; install them later from a package feed when a module cache is available. MiniDLNA/FFmpeg is omitted because the current ARM toolchain rejects the package's x86-only compiler flag."
 }
